@@ -5,7 +5,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT
+    'output' => $OUTPUT,
 ];
 $PAGE->requires->jquery ();
 $PAGE->requires->js('/theme/maker/plugins/back-to-top.js');

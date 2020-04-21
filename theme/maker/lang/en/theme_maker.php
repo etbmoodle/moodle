@@ -32,6 +32,7 @@ $string['region-side-pre'] = 'Right';
 $string['generalheading'] = 'General Settings';                                                                          
 $string['headerheading'] = 'Header';                                                                                                                                                                                                                                                                      
 $string['footerheading'] = 'Footer';  
+$string['dropdownheading'] = 'Dropdown Menu'; 
 $string['slideshowheading'] = 'Frontpage Slideshow';   
 $string['benefitsheading'] = 'Frontpage Benefits';  
 $string['homeblocksheading'] = 'Frontpage Featured';      
@@ -122,12 +123,83 @@ $string['footerwidgettitledesc'] = 'Enter a title';
 $string['footerwidget'] = 'Content';
 $string['footerwidgetdesc'] = 'Enter content';
 
-
-
-
 $string['footerwidgedesc'] = 'This allows you to add extra content in the site footer area.';
 $string['copyright'] = 'Copyright';
 $string['copyrightdesc'] = 'Enter copyright info';
+
+
+//Mega dropdown menu
+$string['dropdownheadingsub'] = 'Dropdown Menu';
+$string['dropdownheadingsubdesc'] = 'Configure header dropdown menu.';
+$string['usedropdown'] = 'Enable Dropdown Menu';
+$string['usedropdowndesc'] = 'Check this box to show the dropdown menu on the site top bar.';
+$string['dropdownname'] = 'Dropdown Menu Name';
+$string['dropdownnamedesc'] = 'Enter dropdown menu name.';
+$string['dropdowncontentheading'] = 'Dropdown Menu Content Heading';
+$string['dropdowncontentheadingdesc'] = 'Enter dropdown menu content heading.';
+
+$string['dropdowncolnumber'] = 'Dropdown Menu Number of Columns';
+$string['dropdowncolnumberdesc'] = 'Choose how many columns of menu items you would like.';
+
+
+$string['dropdownbuttoninfo'] = 'Dropdown Menu Call-To-Action Button';
+$string['dropdownbuttoninfodesc'] = 'Add a CTA button at the end of the dropdown menu content.';
+$string['dropdownbuttontext'] = 'CTA button text';
+$string['dropdownbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['dropdownbuttonurl'] = 'CTA button link';
+$string['dropdownbuttonurldesc'] = 'Enter the target URL of the CTA button.';
+
+$string['dropdownitem1info'] = 'Menu Item 1';
+$string['dropdownitem2info'] = 'Menu Item 2';
+$string['dropdownitem3info'] = 'Menu Item 3';
+$string['dropdownitem4info'] = 'Menu Item 4';
+$string['dropdownitem5info'] = 'Menu Item 5';
+$string['dropdownitem6info'] = 'Menu Item 6';
+$string['dropdownitem7info'] = 'Menu Item 7';
+$string['dropdownitem8info'] = 'Menu Item 8';
+$string['dropdownitem9info'] = 'Menu Item 9';
+$string['dropdownitem10info'] = 'Menu Item 10';
+$string['dropdownitem11info'] = 'Menu Item 11';
+$string['dropdownitem12info'] = 'Menu Item 12';
+$string['dropdownitem13info'] = 'Menu Item 13';
+$string['dropdownitem14info'] = 'Menu Item 14';
+$string['dropdownitem15info'] = 'Menu Item 15';
+$string['dropdownitem16info'] = 'Menu Item 16';
+$string['dropdownitem17info'] = 'Menu Item 17';
+$string['dropdownitem18info'] = 'Menu Item 18';
+$string['dropdownitem19info'] = 'Menu Item 19';
+$string['dropdownitem20info'] = 'Menu Item 20';
+$string['dropdownitem21info'] = 'Menu Item 21';
+$string['dropdownitem22info'] = 'Menu Item 22';
+$string['dropdownitem23info'] = 'Menu Item 23';
+$string['dropdownitem24info'] = 'Menu Item 24';
+$string['dropdownitem25info'] = 'Menu Item 25';
+$string['dropdownitem26info'] = 'Menu Item 26';
+$string['dropdownitem27info'] = 'Menu Item 27';
+$string['dropdownitem28info'] = 'Menu Item 28';
+$string['dropdownitem29info'] = 'Menu Item 29';
+$string['dropdownitem30info'] = 'Menu Item 30';
+$string['dropdownitem31info'] = 'Menu Item 31';
+$string['dropdownitem32info'] = 'Menu Item 32';
+$string['dropdownitem33info'] = 'Menu Item 33';
+$string['dropdownitem34info'] = 'Menu Item 34';
+$string['dropdownitem35info'] = 'Menu Item 35';
+$string['dropdownitem36info'] = 'Menu Item 36';
+$string['dropdownitem37info'] = 'Menu Item 37';
+$string['dropdownitem38info'] = 'Menu Item 38';
+$string['dropdownitem39info'] = 'Menu Item 39';
+$string['dropdownitem40info'] = 'Menu Item 40';
+
+
+
+$string['dropdownitemdesc'] = 'Add menu item';
+$string['dropdownitemtitle'] = 'Menu Item Text';
+$string['dropdownitemurl'] = 'Menu Item Link';
+$string['dropdownitemtitledesc'] = 'Enter menu item text.';
+$string['dropdownitemurldesc'] = 'Enter the target URL of the menu item.';
+
+
+
  
 //Frontpage Slideshow
 $string['slideshowheadingsub'] = 'Frontpage Hero Slideshow';
@@ -162,7 +234,7 @@ $string['herovideoiddesc'] = 'Enter YouTube or Vimeo video ID. (eg. 3ORsUGVNxGs 
 
 
 $string['herourl'] = 'CTA button link';
-$string['herourldesc'] = 'Enter the URL of the CTA button.';
+$string['herourldesc'] = 'Enter the target URL of the CTA button.';
 
 $string['slide1'] = 'Slide 1';
 $string['slide2'] = 'Slide 2';
@@ -185,6 +257,15 @@ $string['benefitsheadingsubdesc'] = 'Configure benefits section.';
 
 $string['usebenefits'] = 'Enable benefits section';
 $string['usebenefitsdesc'] = 'Check this box to show the benefits section on the frontpage.';
+
+
+$string['benefitsbuttoninfo'] = 'Benefits Section Call-To-Action Button';
+$string['benefitsbuttoninfodesc'] = 'Add a CTA button at the end of the section.';
+$string['benefitsbuttontext'] = 'CTA button text';
+$string['benefitsbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['benefitsbuttonurl'] = 'CTA button link';
+$string['benefitsbuttonurldesc'] = 'Enter the target URL of the CTA button.';
+
 
 $string['benefit1info'] = 'Benefit 1';
 $string['benefit2info'] = 'Benefit 2';
@@ -277,6 +358,14 @@ $string['homeblockheight'] = 'Block height';
 $string['homeblockheightdesc'] = 'Adjust the height to have equal height blocks';
 
 
+$string['homeblockbuttoninfo'] = 'Featured Section Call-To-Action Button';
+$string['homeblockbuttoninfodesc'] = 'Add a CTA button at the end of the section.';
+$string['homeblockbuttontext'] = 'CTA button text';
+$string['homeblockbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['homeblockbuttonurl'] = 'CTA button link';
+$string['homeblockbuttonurldesc'] = 'Enter the target URL of the CTA button.';
+
+
 $string['homeblock1info'] = 'Block 1';
 $string['homeblock2info'] = 'Block 2';
 $string['homeblock3info'] = 'Block 3';
@@ -289,6 +378,14 @@ $string['homeblock9info'] = 'Block 9';
 $string['homeblock10info'] = 'Block 10';
 $string['homeblock11info'] = 'Block 11';
 $string['homeblock12info'] = 'Block 12';
+$string['homeblock13info'] = 'Block 13';
+$string['homeblock14info'] = 'Block 14';
+$string['homeblock15info'] = 'Block 15';
+$string['homeblock16info'] = 'Block 16';
+$string['homeblock17info'] = 'Block 17';
+$string['homeblock18info'] = 'Block 18';
+$string['homeblock19info'] = 'Block 19';
+$string['homeblock20info'] = 'Block 20';
 
 
 $string['homeblock1desc'] = 'Enter the settings for block 1.';
@@ -303,6 +400,14 @@ $string['homeblock9desc'] = 'Enter the settings for block 9.';
 $string['homeblock10desc'] = 'Enter the settings for block 10.';
 $string['homeblock11desc'] = 'Enter the settings for block 11.';
 $string['homeblock12desc'] = 'Enter the settings for block 12.';
+$string['homeblock13desc'] = 'Enter the settings for block 13.';
+$string['homeblock14desc'] = 'Enter the settings for block 14.';
+$string['homeblock15desc'] = 'Enter the settings for block 15.';
+$string['homeblock16desc'] = 'Enter the settings for block 16.';
+$string['homeblock17desc'] = 'Enter the settings for block 17.';
+$string['homeblock18desc'] = 'Enter the settings for block 18.';
+$string['homeblock19desc'] = 'Enter the settings for block 19.';
+$string['homeblock20desc'] = 'Enter the settings for block 20.';
 
 
 $string['homeblocktitle'] = 'Title';
@@ -337,7 +442,7 @@ $string['carouselitemcontentdesc'] = 'Enter content for this block.';
 $string['carouselitembuttontext'] = 'CTA button text';
 $string['carouselitembuttontextdesc'] = 'Enter the text for the CTA button';
 $string['carouselitembuttonurl'] = 'CTA button link';
-$string['carouselitembuttonurldesc'] = 'Enter the URL of the CTA button.';
+$string['carouselitembuttonurldesc'] = 'Enter the target URL of the CTA button.';
 
 $string['usecarouselitemvideo'] = 'Enable video for this carousel item';
 $string['usecarouselitemvideodesc'] = 'Check this box to add a video modal link.';
@@ -390,7 +495,7 @@ $string['logoimagedesc'] = 'Upload the logo image. Image Size: 200 x 76px';
 $string['logoalttext'] = 'Alternative text';
 $string['logoalttextdesc'] = 'Alternative text for the logo image.';
 $string['logourl'] = 'Logo link';
-$string['logourldesc'] = 'Enter the URL of the logo image.';
+$string['logourldesc'] = 'Enter the target URL of the logo image.';
 
 
 //Frontpage Categories Section
@@ -400,6 +505,14 @@ $string['usecategories'] = 'Enable categories section';
 $string['usecategoriesdesc'] = 'Check this box to show the categories section on the frontpage.';
 $string['categoriessectiontitle'] = 'Categories section title';
 $string['categoriessectiontitledesc'] = 'Enter section title';
+
+
+$string['categoriesbuttoninfo'] = 'Categories Section Call-To-Action Button';
+$string['categoriesbuttoninfodesc'] = 'Add a CTA button at the end of the section.';
+$string['categoriesbuttontext'] = 'CTA button text';
+$string['categoriesbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['categoriesbuttonurl'] = 'CTA button link';
+$string['categoriesbuttonurldesc'] = 'Enter the target URL of the CTA button.';
 
 
 
@@ -479,6 +592,16 @@ $string['teacher7'] = 'Teacher 7';
 $string['teacher8'] = 'Teacher 8';
 $string['teacher9'] = 'Teacher 9';
 $string['teacher10'] = 'Teacher 10';
+$string['teacher11'] = 'Teacher 11';
+$string['teacher12'] = 'Teacher 12';
+$string['teacher13'] = 'Teacher 13';
+$string['teacher14'] = 'Teacher 14';
+$string['teacher15'] = 'Teacher 15';
+$string['teacher16'] = 'Teacher 16';
+$string['teacher17'] = 'Teacher 17';
+$string['teacher18'] = 'Teacher 18';
+$string['teacher19'] = 'Teacher 19';
+$string['teacher20'] = 'Teacher 20';
 $string['teacher1desc'] = 'Add content for this teacher.';
 $string['teacher2desc'] = 'Add content for this teacher.';
 $string['teacher3desc'] = 'Add content for this teacher.';
@@ -489,6 +612,16 @@ $string['teacher7desc'] = 'Add content for this teacher.';
 $string['teacher8desc'] = 'Add content for this teacher.';
 $string['teacher9desc'] = 'Add content for this teacher.';
 $string['teacher10desc'] = 'Add content for this teacher.';
+$string['teacher11desc'] = 'Add content for this teacher.';
+$string['teacher12desc'] = 'Add content for this teacher.';
+$string['teacher13desc'] = 'Add content for this teacher.';
+$string['teacher14desc'] = 'Add content for this teacher.';
+$string['teacher15desc'] = 'Add content for this teacher.';
+$string['teacher16desc'] = 'Add content for this teacher.';
+$string['teacher17desc'] = 'Add content for this teacher.';
+$string['teacher18desc'] = 'Add content for this teacher.';
+$string['teacher19desc'] = 'Add content for this teacher.';
+$string['teacher20desc'] = 'Add content for this teacher.';
 $string['teacherimage'] = 'Image';
 $string['teacherimagedesc'] = 'Upload a teacher profile image. Image size: 600 x 750px';
 $string['teachername'] = 'Name';
@@ -497,6 +630,14 @@ $string['teachermeta'] = 'Title';
 $string['teachermetadesc'] = 'Teacher title';
 $string['teachercontent'] = 'Bio';
 $string['teachercontentdesc'] = 'Teacher bio.';
+
+
+$string['teachersbuttoninfo'] = 'Teachers Section Call-To-Action Button';
+$string['teachersbuttoninfodesc'] = 'Add a CTA button at the end of the section.';
+$string['teachersbuttontext'] = 'CTA button text';
+$string['teachersbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['teachersbuttonurl'] = 'CTA button link';
+$string['teachersbuttonurldesc'] = 'Enter the target URL of the CTA button.';
 
 //Frontpage testimonials
 $string['testimonialsheadingsub'] = 'Frontpage Testimonials Section';
@@ -507,6 +648,14 @@ $string['testimonialsectiontitle'] = 'Testimonials section title';
 $string['testimonialsectiontitledesc'] = 'Enter section title';
 $string['testimonialitemheight'] = 'Testimonial item height';
 $string['testimonialitemheightdesc'] = 'Adjust the height to have equal height testimonial blocks';
+
+
+$string['testimonialsbuttoninfo'] = 'Testimonials Section Call-To-Action Button';
+$string['testimonialsbuttoninfodesc'] = 'Add a CTA button at the end of the section.';
+$string['testimonialsbuttontext'] = 'CTA button text';
+$string['testimonialsbuttontextdesc'] = 'Enter the text for the CTA button';
+$string['testimonialsbuttonurl'] = 'CTA button link';
+$string['testimonialsbuttonurldesc'] = 'Enter the target URL of the CTA button.';
 
 
 $string['testimonial1'] = 'Testimonial 1';
@@ -618,7 +767,7 @@ $string['faq10desc'] = 'Enter the settings for Q10.';
 $string['faqsectionbuttontext'] = 'CTA button text';
 $string['faqsectionbuttontextdesc'] = 'Enter the text for the CTA button.';
 $string['faqsectionbuttonurl'] = 'CTA Button link';
-$string['faqsectionbuttonurldesc'] = 'Enter the URL of the CTA button.';
+$string['faqsectionbuttonurldesc'] = 'Enter the target URL of the CTA button.';
 
 
 
@@ -635,7 +784,25 @@ $string['ctasectioncontentdesc'] = 'Enter section content.';
 $string['ctasectionbuttontext'] = 'CTA button text';
 $string['ctasectionbuttontextdesc'] = 'Enter the text for the CTA button.';
 $string['ctasectionbuttonurl'] = 'CTA Button link';
-$string['ctasectionbuttonurldesc'] = 'Enter the URL of the CTA button.';
+$string['ctasectionbuttonurldesc'] = 'Enter the target URL of the CTA button.';
+
+
+
+$string['ctadataboxinfo'] = 'Data Box';
+$string['ctadataboxinfodesc'] = 'Add up to 4 data box items.';
+$string['usectadatabox'] = 'Enable Data Box';
+$string['usectadataboxdesc'] = 'Check this box to show the data box content.';
+$string['ctadataitemtitledesc'] = 'Enter a title';
+$string['ctadataitemmetadesc'] = 'Enter a description';
+
+$string['ctadataitem1title'] = 'Data Box Item 1 Title';
+$string['ctadataitem1meta'] = 'Data Box Item 1 Description';
+$string['ctadataitem2title'] = 'Data Box Item 2 Title';
+$string['ctadataitem2meta'] = 'Data Box Item 2 Description';
+$string['ctadataitem3title'] = 'Data Box Item 3 Title';
+$string['ctadataitem3meta'] = 'Data Box Item 3 Description';
+$string['ctadataitem4title'] = 'Data Box Item 4 Title';
+$string['ctadataitem4meta'] = 'Data Box Item 4 Description';
 
 
 //Course Settings

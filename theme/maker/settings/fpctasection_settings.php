@@ -36,6 +36,7 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    
     // CTA Section CTA Button Text
     $name = 'theme_maker/ctasectionbuttontext';
     $title = get_string('ctasectionbuttontext', 'theme_maker');
@@ -60,6 +61,97 @@
     $description = get_string('opennewdesc', 'theme_maker');
     $default = false;
     $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    // Data Box Info
+    $name = 'theme_maker/ctadataboxinfo';
+    $heading = get_string('ctadataboxinfo', 'theme_maker');
+    $information = get_string('ctadataboxinfodesc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+    
+    // Enable Data Box 
+    $name = 'theme_maker/usectadatabox';
+    $title = get_string('usectadatabox', 'theme_maker');
+    $description = get_string('usectadataboxdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    // CTA Data Box Item 1 Title
+    $name = 'theme_maker/ctadataitem1title';
+    $title = get_string('ctadataitem1title', 'theme_maker');
+    $description = get_string('ctadataitemtitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 1 Meta
+    $name = 'theme_maker/ctadataitem1meta';
+    $title = get_string('ctadataitem1meta', 'theme_maker');
+    $description = get_string('ctadataitemmetadesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    // CTA Data Box Item 2 Title
+    $name = 'theme_maker/ctadataitem2title';
+    $title = get_string('ctadataitem2title', 'theme_maker');
+    $description = get_string('ctadataitemtitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 2 Meta
+    $name = 'theme_maker/ctadataitem2meta';
+    $title = get_string('ctadataitem2meta', 'theme_maker');
+    $description = get_string('ctadataitemmetadesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 3 Title
+    $name = 'theme_maker/ctadataitem3title';
+    $title = get_string('ctadataitem3title', 'theme_maker');
+    $description = get_string('ctadataitemtitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 3 Meta
+    $name = 'theme_maker/ctadataitem3meta';
+    $title = get_string('ctadataitem3meta', 'theme_maker');
+    $description = get_string('ctadataitemmetadesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 4 Title
+    $name = 'theme_maker/ctadataitem4title';
+    $title = get_string('ctadataitem4title', 'theme_maker');
+    $description = get_string('ctadataitemtitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // CTA Data Box Item 4 Meta
+    $name = 'theme_maker/ctadataitem4meta';
+    $title = get_string('ctadataitem4meta', 'theme_maker');
+    $description = get_string('ctadataitemmetadesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
         

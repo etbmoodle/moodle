@@ -37,6 +37,16 @@
 			    {{/hascategory}}	    
 			    {{/categories}}
 		    </div><!--//row-->
+		    
+		    {{#categoriesbuttontext}}
+		    <div class="text-center py-3">
+			    {{#categoriesbuttonurl}}<a class="btn btn-cta theme-btn-primary" href="{{{categoriesbuttonurl}}}" {{#categoriesbuttonurlopennew}}target="_blank"{{/categoriesbuttonurlopennew}}>{{/categoriesbuttonurl}}
+				    {{{categoriesbuttontext}}}
+				{{#categoriesbuttonurl}}</a>{{/categoriesbuttonurl}}
+		    </div>
+		    {{/categoriesbuttontext}}
+		    
+		    
 		</div><!--//section-inner-->
     </div><!--//container-fluid-->
     

@@ -18,33 +18,31 @@
     Page header.
 }}
 
-
-<header id="header" class="page-header page-header-secure" role="banner">
 	
-	<div class="branding">
-		<div class="container-fluid">
-			<div class="branding-inner">
+<div class="branding">
+	<div class="container-fluid">
+		<div class="branding-inner">
 
+	        
+	        <a href="{{{ config.wwwroot }}}" class="site-name {{# output.site_logo }}has-logo{{/ output.site_logo }}">
+		        {{^ output.site_logo }}
+		           {{{ sitename }}}
+		        {{/ output.site_logo }}
 		        
-		        <a href="{{{ config.wwwroot }}}" class="site-name {{# output.site_logo }}has-logo{{/ output.site_logo }}">
-			        {{^ output.site_logo }}
-			           {{{ sitename }}}
-			        {{/ output.site_logo }}
-			        
-		            {{# output.site_logo }}
-   
-		                <img class="site-logo" src="{{{ output.site_logo }}}" alt="{{sitename}}">
+	            {{# output.site_logo }}
 
-		            {{/ output.site_logo }}
-		        </a>
-		        
-		        <div class="secure-login-info">
-		        {{{ output.secure_login_info }}}
-		        </div>
+	                <img class="site-logo" src="{{{ output.site_logo }}}" alt="{{sitename}}">
 
-			</div><!--//branding-inner-->
-			
-		</div><!--//container-fluid-->
-	</div><!--//branding-->
-	
-</header><!--//header-->
+	            {{/ output.site_logo }}
+	        </a>
+	        
+	        <div class="secure-login-info">
+	        {{{ output.secure_login_info }}}
+	        </div>
+
+		</div><!--//branding-inner-->
+		
+	</div><!--//container-fluid-->
+</div><!--//branding-->
+
+

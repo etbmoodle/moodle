@@ -20,6 +20,42 @@
     $page->add($setting);
     
     
+    // Benefits Section CTA Button Info
+    $name = 'theme_maker/benefitsbuttoninfo';
+    $heading = get_string('benefitsbuttoninfo', 'theme_maker');
+    $information = get_string('benefitsbuttoninfodesc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+    
+    // Benefits Section CTA Button Text
+    $name = 'theme_maker/benefitsbuttontext';
+    $title = get_string('benefitsbuttontext', 'theme_maker');
+    $description = get_string('benefitsbuttontextdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // Benefits Section CTA Button URL
+    $name = 'theme_maker/benefitsbuttonurl';
+    $title = get_string('benefitsbuttonurl', 'theme_maker');
+    $description = get_string('benefitsbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/benefitsbuttonurlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    
     // Benefit 1
     
     // Description

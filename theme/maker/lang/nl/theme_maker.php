@@ -38,7 +38,7 @@ $string['homeblocksheading'] = 'Voorpagina Aanbevolen';
 $string['promocarouselheading'] = 'Voorpagina Promo';
 $string['logosheading'] = 'Voorpagina logos';
 $string['testimonialsheading'] = 'Voorpagina Testimonials';
-$string['categoriesheading'] = 'Voorpagina Categorieën';
+$string['categoriesheading'] = 'Voorpagina CategorieÃ«n';
 $string['teachersheading'] = 'Voorpagina Instructeurs';
 $string['faqheading'] = 'Voorpagina  FAQ';
 $string['ctasectionheading'] = 'Voorpagina CTA-sectie';
@@ -390,11 +390,11 @@ $string['logourldesc'] = 'Voer de URL in van de logo-afbeelding.';
 
 
 //Frontpage Categories Section
-$string['categoriesheadingsub'] = 'Voorpagina Categorieën Sectie';
+$string['categoriesheadingsub'] = 'Voorpagina CategorieÃ«n Sectie';
 $string['categoriesheadingsubdesc'] = 'Configureer aanbevolen sectie.';
-$string['usecategories'] = 'Sectie categorieën inschakelen';
+$string['usecategories'] = 'Sectie categorieÃ«n inschakelen';
 $string['usecategoriesdesc'] = 'Vink dit vakje aan om het categoriegedeelte op de voorpagina te tonen.';
-$string['categoriessectiontitle'] = 'Categorieën sectietitel';
+$string['categoriessectiontitle'] = 'CategorieÃ«n sectietitel';
 $string['categoriessectiontitledesc'] = 'Voer de sectietitel in';
 
 
@@ -639,9 +639,9 @@ $string['courseheadingsub'] = 'Configureer cursus gerelateerde instellingen';
 $string['coursedisplaystyle'] = 'Indeling stijl cursuslijst';
 $string['coursedisplaystyledesc'] = 'Kies de lay-outstijl. Let op: de lay-out metselwerk bestelt cursusitems van boven naar beneden en van links naar rechts.';
 $string['usecoursesummarytrim'] = 'Afkorting van de samenvatting van de cursus';
-$string['usecoursesummarytrimdesc'] = "Vink dit vakje aan om het cursusoverzicht af te kappen. Het wordt aanbevolen om dit selectievakje ingeschakeld te houden wanneer u de lay-out van de standaard- of kaartencursuslijst gebruikt. U kunt de lengte van de truncatie aanpassen door de onderstaande max. Tekensamenvatting te definiëren.";
+$string['usecoursesummarytrimdesc'] = "Vink dit vakje aan om het cursusoverzicht af te kappen. Het wordt aanbevolen om dit selectievakje ingeschakeld te houden wanneer u de lay-out van de standaard- of kaartencursuslijst gebruikt. U kunt de lengte van de truncatie aanpassen door de onderstaande max. Tekensamenvatting te definiÃ«ren.";
 $string['coursesummarylength'] = 'Cursusoverzicht max. Tekens';
-$string['coursesummarylengthdesc'] = 'Aantal zichtbare tekens vóór truncatie. De standaardwaarde wordt aanbevolen voor de beste ontwerpresultaten bij gebruik van de standaard lay-out van de cursuslijsten';
+$string['coursesummarylengthdesc'] = 'Aantal zichtbare tekens vÃ³Ã³r truncatie. De standaardwaarde wordt aanbevolen voor de beste ontwerpresultaten bij gebruik van de standaard lay-out van de cursuslijsten';
 $string['courseheadingsub'] = 'Cursusinstellingen';
 $string['courseheadingsubdesc'] = 'Configureer de cursuspagina.';
 $string['usecourseheaderimage'] = 'Toon de afbeelding van de cursuskop';
@@ -728,7 +728,7 @@ $string['customcssdesc'] = "Hiermee kunt u de themastijl aanpassen aan uw eigen 
 $string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Gebruik dit veld om SCSS- of CSS-code op te geven die aan het einde van het stylesheet wordt ingespoten.';
 $string['rawscsspre'] = 'Raw initial SCSS';
-$string['rawscsspre_desc'] = 'In dit veld kunt u de SCSS-code initialiseren, deze wordt voor alle andere geïnjecteerd. Meestal zult u deze instelling gebruiken om variabelen te definiëren.';
+$string['rawscsspre_desc'] = 'In dit veld kunt u de SCSS-code initialiseren, deze wordt voor alle andere geÃ¯njecteerd. Meestal zult u deze instelling gebruiken om variabelen te definiÃ«ren.';
 $string['analyticsheadingsub'] = 'Google Analytics';
 $string['analyticsdesc'] = 'Hier kunt u Google Analytics inschakelen voor uw site. Als u er geen hebt, moet u zich aanmelden voor een gratis account op de Google Analytics-site (<a href="http://analytics.google.com" target="_blank">http://analytics.google.com</a>)';
 $string['analyticsid'] = 'Uw tracking-ID';

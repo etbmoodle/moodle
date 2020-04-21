@@ -39,6 +39,15 @@
 			    {{/hasteacher}}
 			    {{/teachers}}
 		    </div><!--//teachers-carousel-->
+		    
+		    {{#teachersbuttontext}}
+		    <div class="text-center py-3">
+			    {{#teachersbuttonurl}}<a class="btn btn-cta theme-btn-primary" href="{{{teachersbuttonurl}}}" {{#teachersbuttonurlopennew}}target="_blank"{{/teachersbuttonurlopennew}}>{{/teachersbuttonurl}}
+				    {{{teachersbuttontext}}}
+				{{#teachersbuttonurl}}</a>{{/teachersbuttonurl}}
+		    </div>
+		    {{/teachersbuttontext}}
+		    
 	    </div><!--//section-inner-->
     </div><!--//container-fluid-->
  </div><!--//teachers-section-->

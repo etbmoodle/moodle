@@ -8,7 +8,8 @@ $bodyattributes = $OUTPUT->body_attributes([]);
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+    'gridicon' => $OUTPUT->image_url('grid-icon-inverse', 'theme'),
 ];
 
 $PAGE->requires->jquery ();

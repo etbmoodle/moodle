@@ -35,6 +35,16 @@
 	            {{/hasbenefit}}
             {{/benefits}}
 	    </div><!--//row-->
+	    
+	    {{#benefitsbuttontext}}
+	    <div class="text-center mb-3">
+		    {{#benefitsbuttonurl}}<a class="btn btn-cta theme-btn-secondary" href="{{{benefitsbuttonurl}}}" {{#benefitsbuttonurlopennew}}target="_blank"{{/benefitsbuttonurlopennew}}>{{/benefitsbuttonurl}}
+			    {{{benefitsbuttontext}}}
+			{{#benefitsbuttonurl}}</a>{{/benefitsbuttonurl}}
+	    </div>
+	    {{/benefitsbuttontext}}
+	    
+	    
     </div><!--//container-->
     
 </div><!--//benefits-section-->

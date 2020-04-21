@@ -16,8 +16,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019111900;
-$plugin->release  = 'Moodle 3.8 Maker v5.0.2';
+$plugin->version   = 2020041600;
+$plugin->release  = 'Moodle 3.8 Maker v5.1';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->requires  = 2019052000; 
 $plugin->component = 'theme_maker';

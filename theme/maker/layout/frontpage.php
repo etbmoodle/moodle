@@ -6,6 +6,7 @@ defined('MOODLE_INTERNAL') || die();
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
 
+
 if ( isloggedin()&&(!isguestuser()) ) {
 	
     //$navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -28,7 +29,7 @@ if ( isloggedin()&&(!isguestuser()) ) {
 	    'bodyattributes' => $bodyattributes,
 	    'navdraweropen' => $navdraweropen,
 	    'regionmainsettingsmenu' => $regionmainsettingsmenu,
-	    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+	    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
 	    
 	];
 	
@@ -38,9 +39,7 @@ if ( isloggedin()&&(!isguestuser()) ) {
 	
 	$templatecontext['flatnavigation'] = $PAGE->flatnav;
 	echo $OUTPUT->render_from_template('theme_maker/frontpage', $templatecontext);
-    
-    
-    
+
     
 } else {
     $navdraweropen = false;
@@ -61,7 +60,9 @@ if ( isloggedin()&&(!isguestuser()) ) {
 	    'bodyattributes' => $bodyattributes,
 	    'navdraweropen' => $navdraweropen,
 	    'regionmainsettingsmenu' => $regionmainsettingsmenu,
-	    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+	    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+	    
+	    'gridicon' => $OUTPUT->image_url('grid-icon-inverse', 'theme'),
 	    
 	];
 	

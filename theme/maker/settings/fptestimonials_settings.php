@@ -60,6 +60,41 @@
 	$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 	$setting->set_updatedcallback('theme_reset_all_caches');
 	$page->add($setting);
+	
+	
+	// Testimonials Section CTA Button Info
+    $name = 'theme_maker/testimonialsbuttoninfo';
+    $heading = get_string('testimonialsbuttoninfo', 'theme_maker');
+    $information = get_string('testimonialsbuttoninfodesc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+    
+    // Testimonials Section CTA Button Text
+    $name = 'theme_maker/testimonialsbuttontext';
+    $title = get_string('testimonialsbuttontext', 'theme_maker');
+    $description = get_string('testimonialsbuttontextdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // Testimonials Section CTA Button URL
+    $name = 'theme_maker/testimonialsbuttonurl';
+    $title = get_string('testimonialsbuttonurl', 'theme_maker');
+    $description = get_string('testimonialsbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/testimonialsbuttonurlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     
     /* Testimonial 1 */

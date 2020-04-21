@@ -70,10 +70,15 @@
 				}
 			}
 		}
+		/* Contact Form */
+		.contact-form-box {
+		    @include box-shadow(0 .5rem 1rem rgba(0,0,0,.15));
+	    }
 		
 		/* Contact Us */
 		.contact-wrapper {
 			text-align: center;
+			
 			.contact-intro, .map-intro {
 				max-width: 800px;
 				margin: 0 auto;
@@ -198,6 +203,9 @@
 		padding: 30px 15px;
 		.staticpage-title {
 			font-size: 28px;
+		}
+		.contact-form-box {
+			@include box-shadow(none);
 		}
 	}
 	

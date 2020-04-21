@@ -27,6 +27,44 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    
+    
+    // Categories Section CTA Button Info
+    $name = 'theme_maker/categoriesbuttoninfo';
+    $heading = get_string('categoriesbuttoninfo', 'theme_maker');
+    $information = get_string('categoriesbuttoninfodesc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+    
+    
+    // Categories Section CTA Button Text
+    $name = 'theme_maker/categoriesbuttontext';
+    $title = get_string('categoriesbuttontext', 'theme_maker');
+    $description = get_string('categoriesbuttontextdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // Categories Section CTA Button URL
+    $name = 'theme_maker/categoriesbuttonurl';
+    $title = get_string('categoriesbuttonurl', 'theme_maker');
+    $description = get_string('categoriesbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/categoriesbuttonurlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
 
 	/* Category 1 */	
     $name = 'theme_maker/category1info';

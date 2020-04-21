@@ -44,7 +44,16 @@
 			    {{/hastestimonial}}
 			    {{/testimonials}}
 
-		    </div><!--//testimonial-carousel-->			    
+		    </div><!--//testimonial-carousel-->		
+		    
+		    {{#testimonialsbuttontext}}
+		    <div class="text-center py-3">
+			    {{#testimonialsbuttonurl}}<a class="btn btn-cta theme-btn-primary" href="{{{testimonialsbuttonurl}}}" {{#testimonialsbuttonurlopennew}}target="_blank"{{/testimonialsbuttonurlopennew}}>{{/testimonialsbuttonurl}}
+				    {{{testimonialsbuttontext}}}
+				{{#testimonialsbuttonurl}}</a>{{/testimonialsbuttonurl}}
+		    </div>
+		    {{/testimonialsbuttontext}}
+		    	    
 	    </div><!--//section-inner-->    
     </div><!--//container-fluid-->
 </div><!--//testimonial-section-->

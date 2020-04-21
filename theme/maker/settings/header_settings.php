@@ -35,7 +35,6 @@
     $page->add($setting);
     
     
-    
     /* Header Alerts */
 	$page->add(new admin_setting_heading('theme_maker_alerts', get_string('alertheadingsub', 'theme_maker'),
             format_text(get_string('alertdesc' , 'theme_maker'), FORMAT_MARKDOWN)));

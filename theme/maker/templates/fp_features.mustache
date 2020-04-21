@@ -29,7 +29,7 @@
 							    {{/blockcontent}}
 						    </div><!--//item-content-->
 						    {{#blockurl}}
-						    <a class="item-link" href="{{{blockurl}}}"></a>
+						    <a class="item-link" href="{{{blockurl}}}" {{#urlopennew}}target="_blank"{{/urlopennew}}></a>
 						    {{/blockurl}}
 					    </div><!--//item-inner-->
 					    {{#blocklabel}}
@@ -38,9 +38,18 @@
 				    </div><!--//item-->		
 				    {{/hasblock}}	    
 			    {{/featuredblocks}}
-			    
 			    		        
 			</div><!--//course-carousel-->
+			
+			{{#homeblockbuttontext}}
+		    <div class="text-center py-3">
+			    {{#homeblockbuttonurl}}<a class="btn btn-cta theme-btn-primary" href="{{{homeblockbuttonurl}}}" {{#homeblockbuttonurlopennew}}target="_blank"{{/homeblockbuttonurlopennew}}>{{/homeblockbuttonurl}}
+				    {{{homeblockbuttontext}}}
+				{{#homeblockbuttonurl}}</a>{{/homeblockbuttonurl}}
+		    </div>
+		    {{/homeblockbuttontext}}
+		    
+		    
 		</div><!--//section-inner-->
     </div><!--//container-fluid-->
 </div><!--//featured-section-->

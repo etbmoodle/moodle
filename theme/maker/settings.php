@@ -11,6 +11,7 @@ if ($ADMIN->fulltree) {
     require('settings/header_settings.php');
     //Footer Settings
     require('settings/footer_settings.php');
+    
     //Frontpage Settings
     require('settings/fpslideshow_settings.php');
     require('settings/fpbenefits_settings.php');
@@ -24,6 +25,8 @@ if ($ADMIN->fulltree) {
     require('settings/fpctasection_settings.php');
     //Coruse Settings
     require('settings/course_settings.php');
+    //Megadropdown Settings
+    require('settings/dropdown_settings.php');
     //Social Media Settings
     require('settings/socialmedia_settings.php');
     //Login page settings

@@ -49,6 +49,42 @@
 	$setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
 	$setting->set_updatedcallback('theme_reset_all_caches');
 	$page->add($setting);
+	
+	
+	// Featured Section CTA Button Info
+    $name = 'theme_maker/homeblockbuttoninfo';
+    $heading = get_string('homeblockbuttoninfo', 'theme_maker');
+    $information = get_string('homeblockbuttoninfodesc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+    
+    // Featured Section CTA Button Text
+    $name = 'theme_maker/homeblockbuttontext';
+    $title = get_string('homeblockbuttontext', 'theme_maker');
+    $description = get_string('homeblockbuttontextdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // Featured Section CTA Button URL
+    $name = 'theme_maker/homeblockbuttonurl';
+    $title = get_string('homeblockbuttonurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblockbuttonurlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
 
 	/* Home Block 1 */	
     $name = 'theme_maker/homeblock1info';
@@ -89,6 +125,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock1urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock1label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -96,6 +141,7 @@
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
+    
     
     /* Home Block 2 */    
     $name = 'theme_maker/homeblock2info';
@@ -132,6 +178,15 @@
     $description = get_string('homeblockbuttonurldesc', 'theme_maker');
     $default = '#link2';
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock2urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
@@ -181,6 +236,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock3urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock3label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -224,6 +288,15 @@
     $description = get_string('homeblockbuttonurldesc', 'theme_maker');
     $default = '#link4';
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock4urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
     
@@ -274,6 +347,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock5urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock5label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -319,6 +401,15 @@
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock6urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     $name = 'theme_maker/homeblock6label';
     $title = get_string('homeblocklabel', 'theme_maker');
@@ -366,6 +457,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock7urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock7label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -410,7 +510,16 @@
     $default = '';
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
     $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);    
+    $page->add($setting);  
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock8urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);  
     
     $name = 'theme_maker/homeblock8label';
     $title = get_string('homeblocklabel', 'theme_maker');
@@ -459,6 +568,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock9urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock9label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -504,6 +622,15 @@
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock10urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
     
     $name = 'theme_maker/homeblock10label';
     $title = get_string('homeblocklabel', 'theme_maker');
@@ -551,6 +678,15 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock11urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock11label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
@@ -597,7 +733,458 @@
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);    
     
+    // URL open in new window    
+    $name = 'theme_maker/homeblock12urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
     $name = 'theme_maker/homeblock12label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 13 */
+    $name = 'theme_maker/homeblock13info';
+    $heading = get_string('homeblock13info', 'theme_maker');
+    $information = get_string('homeblock13desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock13title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock13image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock13image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock13content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock13url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock13urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock13label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    /* Home Block 14 */
+    $name = 'theme_maker/homeblock14info';
+    $heading = get_string('homeblock14info', 'theme_maker');
+    $information = get_string('homeblock14desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock14title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock14image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock14image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock14content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock14url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock14urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock14label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 15 */
+    $name = 'theme_maker/homeblock15info';
+    $heading = get_string('homeblock15info', 'theme_maker');
+    $information = get_string('homeblock15desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock15title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock15image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock15image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock15content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock15url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock15urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock15label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 16 */
+    $name = 'theme_maker/homeblock16info';
+    $heading = get_string('homeblock16info', 'theme_maker');
+    $information = get_string('homeblock16desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock16title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock16image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock16image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock16content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock16url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock16urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock16label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 17 */
+    $name = 'theme_maker/homeblock17info';
+    $heading = get_string('homeblock17info', 'theme_maker');
+    $information = get_string('homeblock17desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock17title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock17image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock17image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock17content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock17url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock17urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock17label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 18 */
+    $name = 'theme_maker/homeblock18info';
+    $heading = get_string('homeblock18info', 'theme_maker');
+    $information = get_string('homeblock18desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock18title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock18image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock18image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock18content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock18url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock18urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock18label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    
+    /* Home Block 19 */
+    $name = 'theme_maker/homeblock19info';
+    $heading = get_string('homeblock19info', 'theme_maker');
+    $information = get_string('homeblock19desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock19title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock19image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock19image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock19content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock19url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock19urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock19label';
+    $title = get_string('homeblocklabel', 'theme_maker');
+    $description = get_string('homeblocklabeldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    /* Home Block 20 */
+    $name = 'theme_maker/homeblock20info';
+    $heading = get_string('homeblock20info', 'theme_maker');
+    $information = get_string('homeblock20desc', 'theme_maker');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $page->add($setting);
+       
+	$name = 'theme_maker/homeblock20title';
+    $title = get_string('homeblocktitle', 'theme_maker');
+    $description = get_string('homeblocktitledesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock20image';
+    $title = get_string('homeblockimage', 'theme_maker');
+    $description = get_string('homeblockimagedesc', 'theme_maker');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'homeblock20image');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock20content';
+    $title = get_string('homeblockcontent', 'theme_maker');
+    $description = get_string('homeblockcontentdesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock20url';
+    $title = get_string('homeblockurl', 'theme_maker');
+    $description = get_string('homeblockbuttonurldesc', 'theme_maker');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);    
+    
+    // URL open in new window    
+    $name = 'theme_maker/homeblock20urlopennew';
+    $title = get_string('opennew', 'theme_maker');
+    $description = get_string('opennewdesc', 'theme_maker');
+    $default = false;
+    $setting = new admin_setting_configcheckbox($name, $title, $description, $default, true, false);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+    
+    $name = 'theme_maker/homeblock20label';
     $title = get_string('homeblocklabel', 'theme_maker');
     $description = get_string('homeblocklabeldesc', 'theme_maker');
     $default = '';

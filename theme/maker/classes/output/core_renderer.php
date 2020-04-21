@@ -173,6 +173,534 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return $this->render_from_template('theme_maker/header_alert', $header_alert);
     }
+    
+    
+    public function header_dropdownmenu() {
+        global $PAGE, $OUTPUT;
+
+        $usedropdown = $PAGE->theme->settings->usedropdown == 1;
+        
+        $dropdownname = (empty($PAGE->theme->settings->dropdownname)) ? false : format_text($PAGE->theme->settings->dropdownname);
+        $dropdowncontentheading = (empty($PAGE->theme->settings->dropdowncontentheading)) ? false : format_text($PAGE->theme->settings->dropdowncontentheading);
+        $dropdowncolnumber = (empty($PAGE->theme->settings->dropdowncolnumber)) ? false : $PAGE->theme->settings->dropdowncolnumber;
+                
+         
+        $dropdownbuttontext = (empty($PAGE->theme->settings->dropdownbuttontext)) ? false : format_text($PAGE->theme->settings->dropdownbuttontext);
+        $dropdownbuttonurl = (empty($PAGE->theme->settings->dropdownbuttonurl)) ? false : $PAGE->theme->settings->dropdownbuttonurl;
+        $dropdownbuttonurlopennew = (empty($PAGE->theme->settings->dropdownbuttonurlopennew)) ? false : $PAGE->theme->settings->dropdownbuttonurlopennew;
+        
+
+        $dropdownitem1title = (empty($PAGE->theme->settings->dropdownitem1title)) ? false : format_text($PAGE->theme->settings->dropdownitem1title);
+        $dropdownitem1url = (empty($PAGE->theme->settings->dropdownitem1url )) ? false : $PAGE->theme->settings->dropdownitem1url;
+        $dropdownitem1opennew = (empty($PAGE->theme->settings->dropdownitem1opennew )) ? false : $PAGE->theme->settings->dropdownitem1opennew;
+        
+        $dropdownitem2title = (empty($PAGE->theme->settings->dropdownitem2title)) ? false : format_text($PAGE->theme->settings->dropdownitem2title);
+        $dropdownitem2url = (empty($PAGE->theme->settings->dropdownitem2url )) ? false : $PAGE->theme->settings->dropdownitem2url;
+        $dropdownitem2opennew = (empty($PAGE->theme->settings->dropdownitem2opennew )) ? false : $PAGE->theme->settings->dropdownitem2opennew;
+        
+        $dropdownitem3title = (empty($PAGE->theme->settings->dropdownitem3title)) ? false : format_text($PAGE->theme->settings->dropdownitem3title);
+        $dropdownitem3url = (empty($PAGE->theme->settings->dropdownitem3url )) ? false : $PAGE->theme->settings->dropdownitem3url;
+        $dropdownitem3opennew = (empty($PAGE->theme->settings->dropdownitem3opennew )) ? false : $PAGE->theme->settings->dropdownitem3opennew;
+        
+        $dropdownitem4title = (empty($PAGE->theme->settings->dropdownitem4title)) ? false : format_text($PAGE->theme->settings->dropdownitem4title);
+        $dropdownitem4url = (empty($PAGE->theme->settings->dropdownitem4url )) ? false : $PAGE->theme->settings->dropdownitem4url;
+        $dropdownitem4opennew = (empty($PAGE->theme->settings->dropdownitem4opennew )) ? false : $PAGE->theme->settings->dropdownitem4opennew;
+        
+        $dropdownitem5title = (empty($PAGE->theme->settings->dropdownitem5title)) ? false : format_text($PAGE->theme->settings->dropdownitem5title);
+        $dropdownitem5url = (empty($PAGE->theme->settings->dropdownitem5url )) ? false : $PAGE->theme->settings->dropdownitem5url;
+        $dropdownitem5opennew = (empty($PAGE->theme->settings->dropdownitem5opennew )) ? false : $PAGE->theme->settings->dropdownitem5opennew;
+        
+        $dropdownitem6title = (empty($PAGE->theme->settings->dropdownitem6title)) ? false : format_text($PAGE->theme->settings->dropdownitem6title);
+        $dropdownitem6url = (empty($PAGE->theme->settings->dropdownitem6url )) ? false : $PAGE->theme->settings->dropdownitem6url;
+        $dropdownitem6opennew = (empty($PAGE->theme->settings->dropdownitem6opennew )) ? false : $PAGE->theme->settings->dropdownitem6opennew;
+        
+        $dropdownitem7title = (empty($PAGE->theme->settings->dropdownitem7title)) ? false : format_text($PAGE->theme->settings->dropdownitem7title);
+        $dropdownitem7url = (empty($PAGE->theme->settings->dropdownitem7url )) ? false : $PAGE->theme->settings->dropdownitem7url;
+        $dropdownitem7opennew = (empty($PAGE->theme->settings->dropdownitem7opennew )) ? false : $PAGE->theme->settings->dropdownitem7opennew;
+        
+        $dropdownitem8title = (empty($PAGE->theme->settings->dropdownitem8title)) ? false : format_text($PAGE->theme->settings->dropdownitem8title);
+        $dropdownitem8url = (empty($PAGE->theme->settings->dropdownitem8url )) ? false : $PAGE->theme->settings->dropdownitem8url;
+        $dropdownitem8opennew = (empty($PAGE->theme->settings->dropdownitem8opennew )) ? false : $PAGE->theme->settings->dropdownitem8opennew;
+        
+        $dropdownitem9title = (empty($PAGE->theme->settings->dropdownitem9title)) ? false : format_text($PAGE->theme->settings->dropdownitem9title);
+        $dropdownitem9url = (empty($PAGE->theme->settings->dropdownitem9url )) ? false : $PAGE->theme->settings->dropdownitem9url;
+        $dropdownitem9opennew = (empty($PAGE->theme->settings->dropdownitem9opennew )) ? false : $PAGE->theme->settings->dropdownitem9opennew;
+        
+        $dropdownitem10title = (empty($PAGE->theme->settings->dropdownitem10title)) ? false : format_text($PAGE->theme->settings->dropdownitem10title);
+        $dropdownitem10url = (empty($PAGE->theme->settings->dropdownitem10url )) ? false : $PAGE->theme->settings->dropdownitem10url;
+        $dropdownitem10opennew = (empty($PAGE->theme->settings->dropdownitem10opennew )) ? false : $PAGE->theme->settings->dropdownitem10opennew;
+        
+        $dropdownitem11title = (empty($PAGE->theme->settings->dropdownitem11title)) ? false : format_text($PAGE->theme->settings->dropdownitem11title);
+        $dropdownitem11url = (empty($PAGE->theme->settings->dropdownitem11url )) ? false : $PAGE->theme->settings->dropdownitem11url;
+        $dropdownitem11opennew = (empty($PAGE->theme->settings->dropdownitem11opennew )) ? false : $PAGE->theme->settings->dropdownitem11opennew;
+        
+        $dropdownitem12title = (empty($PAGE->theme->settings->dropdownitem12title)) ? false : format_text($PAGE->theme->settings->dropdownitem12title);
+        $dropdownitem12url = (empty($PAGE->theme->settings->dropdownitem12url )) ? false : $PAGE->theme->settings->dropdownitem12url;
+        $dropdownitem12opennew = (empty($PAGE->theme->settings->dropdownitem12opennew )) ? false : $PAGE->theme->settings->dropdownitem12opennew;
+        
+        $dropdownitem13title = (empty($PAGE->theme->settings->dropdownitem13title)) ? false : format_text($PAGE->theme->settings->dropdownitem13title);
+        $dropdownitem13url = (empty($PAGE->theme->settings->dropdownitem13url )) ? false : $PAGE->theme->settings->dropdownitem13url;
+        $dropdownitem13opennew = (empty($PAGE->theme->settings->dropdownitem13opennew )) ? false : $PAGE->theme->settings->dropdownitem13opennew;
+        
+        $dropdownitem14title = (empty($PAGE->theme->settings->dropdownitem14title)) ? false : format_text($PAGE->theme->settings->dropdownitem14title);
+        $dropdownitem14url = (empty($PAGE->theme->settings->dropdownitem14url )) ? false : $PAGE->theme->settings->dropdownitem14url;
+        $dropdownitem14opennew = (empty($PAGE->theme->settings->dropdownitem14opennew )) ? false : $PAGE->theme->settings->dropdownitem14opennew;
+        
+        $dropdownitem15title = (empty($PAGE->theme->settings->dropdownitem15title)) ? false : format_text($PAGE->theme->settings->dropdownitem15title);
+        $dropdownitem15url = (empty($PAGE->theme->settings->dropdownitem15url )) ? false : $PAGE->theme->settings->dropdownitem15url;
+        $dropdownitem15opennew = (empty($PAGE->theme->settings->dropdownitem15opennew )) ? false : $PAGE->theme->settings->dropdownitem15opennew;
+        
+        $dropdownitem16title = (empty($PAGE->theme->settings->dropdownitem16title)) ? false : format_text($PAGE->theme->settings->dropdownitem16title);
+        $dropdownitem16url = (empty($PAGE->theme->settings->dropdownitem16url )) ? false : $PAGE->theme->settings->dropdownitem16url;
+        $dropdownitem16opennew = (empty($PAGE->theme->settings->dropdownitem16opennew )) ? false : $PAGE->theme->settings->dropdownitem16opennew;
+        
+        $dropdownitem17title = (empty($PAGE->theme->settings->dropdownitem17title)) ? false : format_text($PAGE->theme->settings->dropdownitem17title);
+        $dropdownitem17url = (empty($PAGE->theme->settings->dropdownitem17url )) ? false : $PAGE->theme->settings->dropdownitem17url;
+        $dropdownitem17opennew = (empty($PAGE->theme->settings->dropdownitem17opennew )) ? false : $PAGE->theme->settings->dropdownitem17opennew;
+        
+        $dropdownitem18title = (empty($PAGE->theme->settings->dropdownitem18title)) ? false : format_text($PAGE->theme->settings->dropdownitem18title);
+        $dropdownitem18url = (empty($PAGE->theme->settings->dropdownitem18url )) ? false : $PAGE->theme->settings->dropdownitem18url;
+        $dropdownitem18opennew = (empty($PAGE->theme->settings->dropdownitem18opennew )) ? false : $PAGE->theme->settings->dropdownitem18opennew;
+        
+        $dropdownitem19title = (empty($PAGE->theme->settings->dropdownitem19title)) ? false : format_text($PAGE->theme->settings->dropdownitem19title);
+        $dropdownitem19url = (empty($PAGE->theme->settings->dropdownitem19url )) ? false : $PAGE->theme->settings->dropdownitem19url;
+        $dropdownitem19opennew = (empty($PAGE->theme->settings->dropdownitem19opennew )) ? false : $PAGE->theme->settings->dropdownitem19opennew;
+        
+        $dropdownitem20title = (empty($PAGE->theme->settings->dropdownitem20title)) ? false : format_text($PAGE->theme->settings->dropdownitem20title);
+        $dropdownitem20url = (empty($PAGE->theme->settings->dropdownitem20url )) ? false : $PAGE->theme->settings->dropdownitem20url;
+        $dropdownitem20opennew = (empty($PAGE->theme->settings->dropdownitem20opennew )) ? false : $PAGE->theme->settings->dropdownitem20opennew;
+        
+        
+        $dropdownitem21title = (empty($PAGE->theme->settings->dropdownitem21title)) ? false : format_text($PAGE->theme->settings->dropdownitem21title);
+        $dropdownitem21url = (empty($PAGE->theme->settings->dropdownitem21url )) ? false : $PAGE->theme->settings->dropdownitem21url;
+        $dropdownitem21opennew = (empty($PAGE->theme->settings->dropdownitem21opennew )) ? false : $PAGE->theme->settings->dropdownitem21opennew;
+
+        
+        $dropdownitem22title = (empty($PAGE->theme->settings->dropdownitem22title)) ? false : format_text($PAGE->theme->settings->dropdownitem22title);
+        $dropdownitem22url = (empty($PAGE->theme->settings->dropdownitem22url )) ? false : $PAGE->theme->settings->dropdownitem22url;
+        $dropdownitem22opennew = (empty($PAGE->theme->settings->dropdownitem22opennew )) ? false : $PAGE->theme->settings->dropdownitem22opennew;
+        
+        $dropdownitem23title = (empty($PAGE->theme->settings->dropdownitem23title)) ? false : format_text($PAGE->theme->settings->dropdownitem23title);
+        $dropdownitem23url = (empty($PAGE->theme->settings->dropdownitem23url )) ? false : $PAGE->theme->settings->dropdownitem23url;
+        $dropdownitem23opennew = (empty($PAGE->theme->settings->dropdownitem23opennew )) ? false : $PAGE->theme->settings->dropdownitem23opennew;
+        
+        $dropdownitem24title = (empty($PAGE->theme->settings->dropdownitem24title)) ? false : format_text($PAGE->theme->settings->dropdownitem24title);
+        $dropdownitem24url = (empty($PAGE->theme->settings->dropdownitem24url )) ? false : $PAGE->theme->settings->dropdownitem24url;
+        $dropdownitem24opennew = (empty($PAGE->theme->settings->dropdownitem24opennew )) ? false : $PAGE->theme->settings->dropdownitem24opennew;
+        
+        $dropdownitem25title = (empty($PAGE->theme->settings->dropdownitem25title)) ? false : format_text($PAGE->theme->settings->dropdownitem25title);
+        $dropdownitem25url = (empty($PAGE->theme->settings->dropdownitem25url )) ? false : $PAGE->theme->settings->dropdownitem25url;
+        $dropdownitem25opennew = (empty($PAGE->theme->settings->dropdownitem25opennew )) ? false : $PAGE->theme->settings->dropdownitem25opennew;
+        
+        $dropdownitem26title = (empty($PAGE->theme->settings->dropdownitem26title)) ? false : format_text($PAGE->theme->settings->dropdownitem26title);
+        $dropdownitem26url = (empty($PAGE->theme->settings->dropdownitem26url )) ? false : $PAGE->theme->settings->dropdownitem26url;
+        $dropdownitem26opennew = (empty($PAGE->theme->settings->dropdownitem26opennew )) ? false : $PAGE->theme->settings->dropdownitem26opennew;
+        
+        $dropdownitem27title = (empty($PAGE->theme->settings->dropdownitem27title)) ? false : format_text($PAGE->theme->settings->dropdownitem27title);
+        $dropdownitem27url = (empty($PAGE->theme->settings->dropdownitem27url )) ? false : $PAGE->theme->settings->dropdownitem27url;
+        $dropdownitem27opennew = (empty($PAGE->theme->settings->dropdownitem27opennew )) ? false : $PAGE->theme->settings->dropdownitem27opennew;
+        
+        $dropdownitem28title = (empty($PAGE->theme->settings->dropdownitem28title)) ? false : format_text($PAGE->theme->settings->dropdownitem28title);
+        $dropdownitem28url = (empty($PAGE->theme->settings->dropdownitem28url )) ? false : $PAGE->theme->settings->dropdownitem28url;
+        $dropdownitem28opennew = (empty($PAGE->theme->settings->dropdownitem28opennew )) ? false : $PAGE->theme->settings->dropdownitem28opennew;
+        
+        $dropdownitem29title = (empty($PAGE->theme->settings->dropdownitem29title)) ? false : format_text($PAGE->theme->settings->dropdownitem29title);
+        $dropdownitem29url = (empty($PAGE->theme->settings->dropdownitem29url )) ? false : $PAGE->theme->settings->dropdownitem29url;
+        $dropdownitem29opennew = (empty($PAGE->theme->settings->dropdownitem29opennew )) ? false : $PAGE->theme->settings->dropdownitem29opennew;
+        
+        $dropdownitem30title = (empty($PAGE->theme->settings->dropdownitem30title)) ? false : format_text($PAGE->theme->settings->dropdownitem30title);
+        $dropdownitem30url = (empty($PAGE->theme->settings->dropdownitem30url )) ? false : $PAGE->theme->settings->dropdownitem30url;
+        $dropdownitem30opennew = (empty($PAGE->theme->settings->dropdownitem30opennew )) ? false : $PAGE->theme->settings->dropdownitem30opennew;
+        
+        
+        $dropdownitem31title = (empty($PAGE->theme->settings->dropdownitem31title)) ? false : format_text($PAGE->theme->settings->dropdownitem31title);
+        $dropdownitem31url = (empty($PAGE->theme->settings->dropdownitem31url )) ? false : $PAGE->theme->settings->dropdownitem31url;
+        $dropdownitem31opennew = (empty($PAGE->theme->settings->dropdownitem31opennew )) ? false : $PAGE->theme->settings->dropdownitem31opennew;
+
+        
+        $dropdownitem32title = (empty($PAGE->theme->settings->dropdownitem32title)) ? false : format_text($PAGE->theme->settings->dropdownitem32title);
+        $dropdownitem32url = (empty($PAGE->theme->settings->dropdownitem32url )) ? false : $PAGE->theme->settings->dropdownitem32url;
+        $dropdownitem32opennew = (empty($PAGE->theme->settings->dropdownitem32opennew )) ? false : $PAGE->theme->settings->dropdownitem32opennew;
+        
+        $dropdownitem33title = (empty($PAGE->theme->settings->dropdownitem33title)) ? false : format_text($PAGE->theme->settings->dropdownitem33title);
+        $dropdownitem33url = (empty($PAGE->theme->settings->dropdownitem33url )) ? false : $PAGE->theme->settings->dropdownitem33url;
+        $dropdownitem33opennew = (empty($PAGE->theme->settings->dropdownitem33opennew )) ? false : $PAGE->theme->settings->dropdownitem33opennew;
+        
+        $dropdownitem34title = (empty($PAGE->theme->settings->dropdownitem34title)) ? false : format_text($PAGE->theme->settings->dropdownitem34title);
+        $dropdownitem34url = (empty($PAGE->theme->settings->dropdownitem34url )) ? false : $PAGE->theme->settings->dropdownitem34url;
+        $dropdownitem34opennew = (empty($PAGE->theme->settings->dropdownitem34opennew )) ? false : $PAGE->theme->settings->dropdownitem34opennew;
+        
+        $dropdownitem35title = (empty($PAGE->theme->settings->dropdownitem35title)) ? false : format_text($PAGE->theme->settings->dropdownitem35title);
+        $dropdownitem35url = (empty($PAGE->theme->settings->dropdownitem35url )) ? false : $PAGE->theme->settings->dropdownitem35url;
+        $dropdownitem35opennew = (empty($PAGE->theme->settings->dropdownitem35opennew )) ? false : $PAGE->theme->settings->dropdownitem35opennew;
+        
+        $dropdownitem36title = (empty($PAGE->theme->settings->dropdownitem36title)) ? false : format_text($PAGE->theme->settings->dropdownitem36title);
+        $dropdownitem36url = (empty($PAGE->theme->settings->dropdownitem36url )) ? false : $PAGE->theme->settings->dropdownitem36url;
+        $dropdownitem36opennew = (empty($PAGE->theme->settings->dropdownitem36opennew )) ? false : $PAGE->theme->settings->dropdownitem36opennew;
+        
+        $dropdownitem37title = (empty($PAGE->theme->settings->dropdownitem37title)) ? false : format_text($PAGE->theme->settings->dropdownitem37title);
+        $dropdownitem37url = (empty($PAGE->theme->settings->dropdownitem37url )) ? false : $PAGE->theme->settings->dropdownitem37url;
+        $dropdownitem37opennew = (empty($PAGE->theme->settings->dropdownitem37opennew )) ? false : $PAGE->theme->settings->dropdownitem37opennew;
+        
+        $dropdownitem38title = (empty($PAGE->theme->settings->dropdownitem38title)) ? false : format_text($PAGE->theme->settings->dropdownitem38title);
+        $dropdownitem38url = (empty($PAGE->theme->settings->dropdownitem38url )) ? false : $PAGE->theme->settings->dropdownitem38url;
+        $dropdownitem38opennew = (empty($PAGE->theme->settings->dropdownitem38opennew )) ? false : $PAGE->theme->settings->dropdownitem38opennew;
+        
+        $dropdownitem39title = (empty($PAGE->theme->settings->dropdownitem39title)) ? false : format_text($PAGE->theme->settings->dropdownitem39title);
+        $dropdownitem39url = (empty($PAGE->theme->settings->dropdownitem39url )) ? false : $PAGE->theme->settings->dropdownitem39url;
+        $dropdownitem39opennew = (empty($PAGE->theme->settings->dropdownitem39opennew )) ? false : $PAGE->theme->settings->dropdownitem39opennew;
+        
+        $dropdownitem40title = (empty($PAGE->theme->settings->dropdownitem40title)) ? false : format_text($PAGE->theme->settings->dropdownitem40title);
+        $dropdownitem40url = (empty($PAGE->theme->settings->dropdownitem40url )) ? false : $PAGE->theme->settings->dropdownitem40url;
+        $dropdownitem40opennew = (empty($PAGE->theme->settings->dropdownitem40opennew )) ? false : $PAGE->theme->settings->dropdownitem40opennew;
+        
+        
+        
+        $dropdownicon = $OUTPUT->image_url('grid-icon-inverse', 'theme');
+       
+
+        $dropdownmenu = [
+
+        'usedropdown' => $usedropdown,
+        'dropdownicon' => $dropdownicon,
+        'dropdownname' => $dropdownname,
+        'dropdowncontentheading' => $dropdowncontentheading,
+        'dropdowncolnumber' => $dropdowncolnumber,
+        
+        'dropdownbuttontext' => $dropdownbuttontext,
+        'dropdownbuttonurl' => $dropdownbuttonurl,
+        'dropdownbuttonurlopennew' => $dropdownbuttonurlopennew,
+        
+        
+        'dropdownmenuitems' => array(
+	        
+            array(
+                'hasmenuitem' => $dropdownitem1title,
+                'menuitemtitle' => $dropdownitem1title,
+                'menuitemurl' => $dropdownitem1url,
+                'urlopennew' => $dropdownitem1opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem2title,
+                'menuitemtitle' => $dropdownitem2title,
+                'menuitemurl' => $dropdownitem2url,
+                'urlopennew' => $dropdownitem2opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem3title,
+                'menuitemtitle' => $dropdownitem3title,
+                'menuitemurl' => $dropdownitem3url,
+                'urlopennew' => $dropdownitem3opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem4title,
+                'menuitemtitle' => $dropdownitem4title,
+                'menuitemurl' => $dropdownitem4url,
+                'urlopennew' => $dropdownitem4opennew,
+
+            ) ,
+            
+            
+            array(
+                'hasmenuitem' => $dropdownitem5title,
+                'menuitemtitle' => $dropdownitem5title,
+                'menuitemurl' => $dropdownitem5url,
+                'urlopennew' => $dropdownitem5opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem6title,
+                'menuitemtitle' => $dropdownitem6title,
+                'menuitemurl' => $dropdownitem6url,
+                'urlopennew' => $dropdownitem6opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem7title,
+                'menuitemtitle' => $dropdownitem7title,
+                'menuitemurl' => $dropdownitem7url,
+                'urlopennew' => $dropdownitem7opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem8title,
+                'menuitemtitle' => $dropdownitem8title,
+                'menuitemurl' => $dropdownitem8url,
+                'urlopennew' => $dropdownitem8opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem9title,
+                'menuitemtitle' => $dropdownitem9title,
+                'menuitemurl' => $dropdownitem9url,
+                'urlopennew' => $dropdownitem9opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem10title,
+                'menuitemtitle' => $dropdownitem10title,
+                'menuitemurl' => $dropdownitem10url,
+                'urlopennew' => $dropdownitem10opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem11title,
+                'menuitemtitle' => $dropdownitem11title,
+                'menuitemurl' => $dropdownitem11url,
+                'urlopennew' => $dropdownitem11opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem12title,
+                'menuitemtitle' => $dropdownitem12title,
+                'menuitemurl' => $dropdownitem12url,
+                'urlopennew' => $dropdownitem12opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem13title,
+                'menuitemtitle' => $dropdownitem13title,
+                'menuitemurl' => $dropdownitem13url,
+                'urlopennew' => $dropdownitem13opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem14title,
+                'menuitemtitle' => $dropdownitem14title,
+                'menuitemurl' => $dropdownitem14url,
+                'urlopennew' => $dropdownitem14opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem15title,
+                'menuitemtitle' => $dropdownitem15title,
+                'menuitemurl' => $dropdownitem15url,
+                'urlopennew' => $dropdownitem15opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem16title,
+                'menuitemtitle' => $dropdownitem16title,
+                'menuitemurl' => $dropdownitem16url,
+                'urlopennew' => $dropdownitem16opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem17title,
+                'menuitemtitle' => $dropdownitem17title,
+                'menuitemurl' => $dropdownitem17url,
+                'urlopennew' => $dropdownitem17opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem18title,
+                'menuitemtitle' => $dropdownitem18title,
+                'menuitemurl' => $dropdownitem18url,
+                'urlopennew' => $dropdownitem18opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem19title,
+                'menuitemtitle' => $dropdownitem19title,
+                'menuitemurl' => $dropdownitem19url,
+                'urlopennew' => $dropdownitem19opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem20title,
+                'menuitemtitle' => $dropdownitem20title,
+                'menuitemurl' => $dropdownitem20url,
+                'urlopennew' => $dropdownitem20opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem21title,
+                'menuitemtitle' => $dropdownitem21title,
+                'menuitemurl' => $dropdownitem21url,
+                'urlopennew' => $dropdownitem21opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem22title,
+                'menuitemtitle' => $dropdownitem22title,
+                'menuitemurl' => $dropdownitem22url,
+                'urlopennew' => $dropdownitem22opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem23title,
+                'menuitemtitle' => $dropdownitem23title,
+                'menuitemurl' => $dropdownitem23url,
+                'urlopennew' => $dropdownitem23opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem24title,
+                'menuitemtitle' => $dropdownitem24title,
+                'menuitemurl' => $dropdownitem24url,
+                'urlopennew' => $dropdownitem24opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem25title,
+                'menuitemtitle' => $dropdownitem25title,
+                'menuitemurl' => $dropdownitem25url,
+                'urlopennew' => $dropdownitem25opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem26title,
+                'menuitemtitle' => $dropdownitem26title,
+                'menuitemurl' => $dropdownitem26url,
+                'urlopennew' => $dropdownitem26opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem27title,
+                'menuitemtitle' => $dropdownitem27title,
+                'menuitemurl' => $dropdownitem27url,
+                'urlopennew' => $dropdownitem27opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem28title,
+                'menuitemtitle' => $dropdownitem28title,
+                'menuitemurl' => $dropdownitem28url,
+                'urlopennew' => $dropdownitem28opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem29title,
+                'menuitemtitle' => $dropdownitem29title,
+                'menuitemurl' => $dropdownitem29url,
+                'urlopennew' => $dropdownitem29opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem30title,
+                'menuitemtitle' => $dropdownitem30title,
+                'menuitemurl' => $dropdownitem30url,
+                'urlopennew' => $dropdownitem30opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem31title,
+                'menuitemtitle' => $dropdownitem31title,
+                'menuitemurl' => $dropdownitem31url,
+                'urlopennew' => $dropdownitem31opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem32title,
+                'menuitemtitle' => $dropdownitem32title,
+                'menuitemurl' => $dropdownitem32url,
+                'urlopennew' => $dropdownitem32opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem33title,
+                'menuitemtitle' => $dropdownitem33title,
+                'menuitemurl' => $dropdownitem33url,
+                'urlopennew' => $dropdownitem33opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem34title,
+                'menuitemtitle' => $dropdownitem34title,
+                'menuitemurl' => $dropdownitem34url,
+                'urlopennew' => $dropdownitem34opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem35title,
+                'menuitemtitle' => $dropdownitem35title,
+                'menuitemurl' => $dropdownitem35url,
+                'urlopennew' => $dropdownitem35opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem36title,
+                'menuitemtitle' => $dropdownitem36title,
+                'menuitemurl' => $dropdownitem36url,
+                'urlopennew' => $dropdownitem36opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem37title,
+                'menuitemtitle' => $dropdownitem37title,
+                'menuitemurl' => $dropdownitem37url,
+                'urlopennew' => $dropdownitem37opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem38title,
+                'menuitemtitle' => $dropdownitem38title,
+                'menuitemurl' => $dropdownitem38url,
+                'urlopennew' => $dropdownitem38opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem39title,
+                'menuitemtitle' => $dropdownitem39title,
+                'menuitemurl' => $dropdownitem39url,
+                'urlopennew' => $dropdownitem39opennew,
+
+            ) ,
+            
+            array(
+                'hasmenuitem' => $dropdownitem40title,
+                'menuitemtitle' => $dropdownitem40title,
+                'menuitemurl' => $dropdownitem40url,
+                'urlopennew' => $dropdownitem40opennew,
+
+            ) ,
+
+        ),
+
+        ];
+
+        return $this->render_from_template('theme_maker/header_dropdownmenu', $dropdownmenu);
+    }
 
 
         
@@ -541,6 +1069,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $usebenefit4image = $PAGE->theme->settings->usebenefit4image == 1;
         $usebenefit5image = $PAGE->theme->settings->usebenefit5image == 1;
         $usebenefit6image = $PAGE->theme->settings->usebenefit6image == 1;
+        
+        
+        $benefitsbuttontext = (empty($PAGE->theme->settings->benefitsbuttontext)) ? false : format_text($PAGE->theme->settings->benefitsbuttontext);
+        $benefitsbuttonurl = (empty($PAGE->theme->settings->benefitsbuttonurl)) ? false : $PAGE->theme->settings->benefitsbuttonurl;
+        $benefitsbuttonurlopennew = (empty($PAGE->theme->settings->benefitsbuttonurlopennew)) ? false : $PAGE->theme->settings->benefitsbuttonurlopennew;
 
         
         $benefit1icon = (empty($PAGE->theme->settings->benefit1icon)) ? false : $PAGE->theme->settings->benefit1icon;
@@ -579,6 +1112,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         'usebenefits' => $usebenefits,
         'hasinternet' => $hasinternet,
+        
+        'benefitsbuttontext' => $benefitsbuttontext,
+        'benefitsbuttonurl' => $benefitsbuttonurl,
+        'benefitsbuttonurlopennew' => $benefitsbuttonurlopennew,
         
         'benefits' => array(
 	        
@@ -651,10 +1188,16 @@ class core_renderer extends \theme_boost\output\core_renderer {
         
         $featuredsectiontitle = (empty($PAGE->theme->settings->featuredsectiontitle)) ? false : format_text($PAGE->theme->settings->featuredsectiontitle);
         
+        
+        $homeblockbuttontext = (empty($PAGE->theme->settings->homeblockbuttontext)) ? false : format_text($PAGE->theme->settings->homeblockbuttontext);
+        $homeblockbuttonurl = (empty($PAGE->theme->settings->homeblockbuttonurl)) ? false : $PAGE->theme->settings->homeblockbuttonurl;
+        $homeblockbuttonurlopennew = (empty($PAGE->theme->settings->homeblockbuttonurlopennew)) ? false : $PAGE->theme->settings->homeblockbuttonurlopennew;
+        
 
         $homeblock1title = (empty($PAGE->theme->settings->homeblock1title)) ? false : format_text($PAGE->theme->settings->homeblock1title);
         $homeblock1content = (empty($PAGE->theme->settings->homeblock1content)) ? false : format_text($PAGE->theme->settings->homeblock1content);
         $homeblock1url = (empty($PAGE->theme->settings->homeblock1url)) ? false : $PAGE->theme->settings->homeblock1url;
+        $homeblock1urlopennew = (empty($PAGE->theme->settings->homeblock1urlopennew)) ? false : $PAGE->theme->settings->homeblock1urlopennew;
         $homeblock1image = (empty($PAGE->theme->setting_file_url('homeblock1image', 'homeblock1image'))) ? false : $PAGE->theme->setting_file_url('homeblock1image', 'homeblock1image');
         $homeblock1label = (empty($PAGE->theme->settings->homeblock1label)) ? false : format_text($PAGE->theme->settings->homeblock1label);
         
@@ -662,74 +1205,147 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $homeblock2title = (empty($PAGE->theme->settings->homeblock2title)) ? false : format_text($PAGE->theme->settings->homeblock2title);
         $homeblock2content = (empty($PAGE->theme->settings->homeblock2content)) ? false : format_text($PAGE->theme->settings->homeblock2content);
         $homeblock2url = (empty($PAGE->theme->settings->homeblock2url)) ? false : $PAGE->theme->settings->homeblock2url;
+        $homeblock2urlopennew = (empty($PAGE->theme->settings->homeblock2urlopennew)) ? false : $PAGE->theme->settings->homeblock2urlopennew;
         $homeblock2image = (empty($PAGE->theme->setting_file_url('homeblock2image', 'homeblock2image'))) ? false : $PAGE->theme->setting_file_url('homeblock2image', 'homeblock2image');
         $homeblock2label = (empty($PAGE->theme->settings->homeblock2label)) ? false : format_text($PAGE->theme->settings->homeblock2label);
         
         $homeblock3title = (empty($PAGE->theme->settings->homeblock3title)) ? false : format_text($PAGE->theme->settings->homeblock3title);
         $homeblock3content = (empty($PAGE->theme->settings->homeblock3content)) ? false : format_text($PAGE->theme->settings->homeblock3content);
         $homeblock3url = (empty($PAGE->theme->settings->homeblock3url)) ? false : $PAGE->theme->settings->homeblock3url;
+        $homeblock3urlopennew = (empty($PAGE->theme->settings->homeblock3urlopennew)) ? false : $PAGE->theme->settings->homeblock3urlopennew;
         $homeblock3image = (empty($PAGE->theme->setting_file_url('homeblock3image', 'homeblock3image'))) ? false : $PAGE->theme->setting_file_url('homeblock3image', 'homeblock3image');
         $homeblock3label = (empty($PAGE->theme->settings->homeblock3label)) ? false : format_text($PAGE->theme->settings->homeblock3label);
         
         $homeblock4title = (empty($PAGE->theme->settings->homeblock4title)) ? false : format_text($PAGE->theme->settings->homeblock4title);
         $homeblock4content = (empty($PAGE->theme->settings->homeblock4content)) ? false : format_text($PAGE->theme->settings->homeblock4content);
         $homeblock4url = (empty($PAGE->theme->settings->homeblock4url)) ? false : $PAGE->theme->settings->homeblock4url;
+        $homeblock4urlopennew = (empty($PAGE->theme->settings->homeblock4urlopennew)) ? false : $PAGE->theme->settings->homeblock4urlopennew;
         $homeblock4image = (empty($PAGE->theme->setting_file_url('homeblock4image', 'homeblock4image'))) ? false : $PAGE->theme->setting_file_url('homeblock4image', 'homeblock4image');
         $homeblock4label = (empty($PAGE->theme->settings->homeblock4label)) ? false : format_text($PAGE->theme->settings->homeblock4label);
         
         $homeblock5title = (empty($PAGE->theme->settings->homeblock5title)) ? false : format_text($PAGE->theme->settings->homeblock5title);
         $homeblock5content = (empty($PAGE->theme->settings->homeblock5content)) ? false : format_text($PAGE->theme->settings->homeblock5content);
         $homeblock5url = (empty($PAGE->theme->settings->homeblock5url)) ? false : $PAGE->theme->settings->homeblock5url;
+        $homeblock5urlopennew = (empty($PAGE->theme->settings->homeblock5urlopennew)) ? false : $PAGE->theme->settings->homeblock5urlopennew;
         $homeblock5image = (empty($PAGE->theme->setting_file_url('homeblock5image', 'homeblock5image'))) ? false : $PAGE->theme->setting_file_url('homeblock5image', 'homeblock5image');
         $homeblock5label = (empty($PAGE->theme->settings->homeblock5label)) ? false : format_text($PAGE->theme->settings->homeblock5label);
         
         $homeblock6title = (empty($PAGE->theme->settings->homeblock6title)) ? false : format_text($PAGE->theme->settings->homeblock6title);
         $homeblock6content = (empty($PAGE->theme->settings->homeblock6content)) ? false : format_text($PAGE->theme->settings->homeblock6content);
         $homeblock6url = (empty($PAGE->theme->settings->homeblock6url)) ? false : $PAGE->theme->settings->homeblock6url;
+        $homeblock6urlopennew = (empty($PAGE->theme->settings->homeblock6urlopennew)) ? false : $PAGE->theme->settings->homeblock6urlopennew;
         $homeblock6image = (empty($PAGE->theme->setting_file_url('homeblock6image', 'homeblock6image'))) ? false : $PAGE->theme->setting_file_url('homeblock6image', 'homeblock6image');
         $homeblock6label = (empty($PAGE->theme->settings->homeblock6label)) ? false : format_text($PAGE->theme->settings->homeblock6label);
         
         $homeblock7title = (empty($PAGE->theme->settings->homeblock7title)) ? false : format_text($PAGE->theme->settings->homeblock7title);
         $homeblock7content = (empty($PAGE->theme->settings->homeblock7content)) ? false : format_text($PAGE->theme->settings->homeblock7content);
         $homeblock7url = (empty($PAGE->theme->settings->homeblock7url)) ? false : $PAGE->theme->settings->homeblock7url;
+        $homeblock7urlopennew = (empty($PAGE->theme->settings->homeblock7urlopennew)) ? false : $PAGE->theme->settings->homeblock7urlopennew;
         $homeblock7image = (empty($PAGE->theme->setting_file_url('homeblock7image', 'homeblock7image'))) ? false : $PAGE->theme->setting_file_url('homeblock7image', 'homeblock7image');
         $homeblock7label = (empty($PAGE->theme->settings->homeblock7label)) ? false : format_text($PAGE->theme->settings->homeblock7label);
         
         $homeblock8title = (empty($PAGE->theme->settings->homeblock8title)) ? false : format_text($PAGE->theme->settings->homeblock8title);
         $homeblock8content = (empty($PAGE->theme->settings->homeblock8content)) ? false : format_text($PAGE->theme->settings->homeblock8content);
         $homeblock8url = (empty($PAGE->theme->settings->homeblock8url)) ? false : $PAGE->theme->settings->homeblock8url;
+        $homeblock8urlopennew = (empty($PAGE->theme->settings->homeblock8urlopennew)) ? false : $PAGE->theme->settings->homeblock8urlopennew;
         $homeblock8image = (empty($PAGE->theme->setting_file_url('homeblock8image', 'homeblock8image'))) ? false : $PAGE->theme->setting_file_url('homeblock8image', 'homeblock8image');
         $homeblock8label = (empty($PAGE->theme->settings->homeblock8label)) ? false : format_text($PAGE->theme->settings->homeblock8label);
         
         $homeblock9title = (empty($PAGE->theme->settings->homeblock9title)) ? false : format_text($PAGE->theme->settings->homeblock9title);
         $homeblock9content = (empty($PAGE->theme->settings->homeblock9content)) ? false : format_text($PAGE->theme->settings->homeblock9content);
         $homeblock9url = (empty($PAGE->theme->settings->homeblock9url)) ? false : $PAGE->theme->settings->homeblock9url;
+        $homeblock9urlopennew = (empty($PAGE->theme->settings->homeblock9urlopennew)) ? false : $PAGE->theme->settings->homeblock9urlopennew;
         $homeblock9image = (empty($PAGE->theme->setting_file_url('homeblock9image', 'homeblock9image'))) ? false : $PAGE->theme->setting_file_url('homeblock9image', 'homeblock9image');
         $homeblock9label = (empty($PAGE->theme->settings->homeblock9label)) ? false : format_text($PAGE->theme->settings->homeblock9label);
         
         $homeblock10title = (empty($PAGE->theme->settings->homeblock10title)) ? false : format_text($PAGE->theme->settings->homeblock10title);
         $homeblock10content = (empty($PAGE->theme->settings->homeblock10content)) ? false : format_text($PAGE->theme->settings->homeblock10content);
         $homeblock10url = (empty($PAGE->theme->settings->homeblock10url)) ? false : $PAGE->theme->settings->homeblock10url;
+        $homeblock10urlopennew = (empty($PAGE->theme->settings->homeblock10urlopennew)) ? false : $PAGE->theme->settings->homeblock10urlopennew;
         $homeblock10image = (empty($PAGE->theme->setting_file_url('homeblock10image', 'homeblock10image'))) ? false : $PAGE->theme->setting_file_url('homeblock10image', 'homeblock10image');
         $homeblock10label = (empty($PAGE->theme->settings->homeblock10label)) ? false : format_text($PAGE->theme->settings->homeblock10label);
         
         $homeblock11title = (empty($PAGE->theme->settings->homeblock11title)) ? false : format_text($PAGE->theme->settings->homeblock11title);
         $homeblock11content = (empty($PAGE->theme->settings->homeblock11content)) ? false : format_text($PAGE->theme->settings->homeblock11content);
         $homeblock11url = (empty($PAGE->theme->settings->homeblock11url)) ? false : $PAGE->theme->settings->homeblock11url;
+        $homeblock11urlopennew = (empty($PAGE->theme->settings->homeblock11urlopennew)) ? false : $PAGE->theme->settings->homeblock11urlopennew;
         $homeblock11image = (empty($PAGE->theme->setting_file_url('homeblock11image', 'homeblock11image'))) ? false : $PAGE->theme->setting_file_url('homeblock11image', 'homeblock11image');
         $homeblock11label = (empty($PAGE->theme->settings->homeblock11label)) ? false : format_text($PAGE->theme->settings->homeblock11label);
         
         $homeblock12title = (empty($PAGE->theme->settings->homeblock12title)) ? false : format_text($PAGE->theme->settings->homeblock12title);
         $homeblock12content = (empty($PAGE->theme->settings->homeblock12content)) ? false : format_text($PAGE->theme->settings->homeblock12content);
         $homeblock12url = (empty($PAGE->theme->settings->homeblock12url)) ? false : $PAGE->theme->settings->homeblock12url;
+        $homeblock12urlopennew = (empty($PAGE->theme->settings->homeblock12urlopennew)) ? false : $PAGE->theme->settings->homeblock12urlopennew;
         $homeblock12image = (empty($PAGE->theme->setting_file_url('homeblock12image', 'homeblock12image'))) ? false : $PAGE->theme->setting_file_url('homeblock12image', 'homeblock12image');
         $homeblock12label = (empty($PAGE->theme->settings->homeblock12label)) ? false : format_text($PAGE->theme->settings->homeblock12label);
+        
+        $homeblock13title = (empty($PAGE->theme->settings->homeblock13title)) ? false : format_text($PAGE->theme->settings->homeblock13title);
+        $homeblock13content = (empty($PAGE->theme->settings->homeblock13content)) ? false : format_text($PAGE->theme->settings->homeblock13content);
+        $homeblock13url = (empty($PAGE->theme->settings->homeblock13url)) ? false : $PAGE->theme->settings->homeblock13url;
+        $homeblock13urlopennew = (empty($PAGE->theme->settings->homeblock13urlopennew)) ? false : $PAGE->theme->settings->homeblock13urlopennew;
+        $homeblock13image = (empty($PAGE->theme->setting_file_url('homeblock13image', 'homeblock13image'))) ? false : $PAGE->theme->setting_file_url('homeblock13image', 'homeblock13image');
+        $homeblock13label = (empty($PAGE->theme->settings->homeblock13label)) ? false : format_text($PAGE->theme->settings->homeblock13label);
+        
+        $homeblock14title = (empty($PAGE->theme->settings->homeblock14title)) ? false : format_text($PAGE->theme->settings->homeblock14title);
+        $homeblock14content = (empty($PAGE->theme->settings->homeblock14content)) ? false : format_text($PAGE->theme->settings->homeblock14content);
+        $homeblock14url = (empty($PAGE->theme->settings->homeblock14url)) ? false : $PAGE->theme->settings->homeblock14url;
+        $homeblock14urlopennew = (empty($PAGE->theme->settings->homeblock14urlopennew)) ? false : $PAGE->theme->settings->homeblock14urlopennew;
+        $homeblock14image = (empty($PAGE->theme->setting_file_url('homeblock14image', 'homeblock14image'))) ? false : $PAGE->theme->setting_file_url('homeblock14image', 'homeblock14image');
+        $homeblock14label = (empty($PAGE->theme->settings->homeblock14label)) ? false : format_text($PAGE->theme->settings->homeblock14label);
+        
+        $homeblock15title = (empty($PAGE->theme->settings->homeblock15title)) ? false : format_text($PAGE->theme->settings->homeblock15title);
+        $homeblock15content = (empty($PAGE->theme->settings->homeblock15content)) ? false : format_text($PAGE->theme->settings->homeblock15content);
+        $homeblock15url = (empty($PAGE->theme->settings->homeblock15url)) ? false : $PAGE->theme->settings->homeblock15url;
+        $homeblock15urlopennew = (empty($PAGE->theme->settings->homeblock15urlopennew)) ? false : $PAGE->theme->settings->homeblock15urlopennew;
+        $homeblock15image = (empty($PAGE->theme->setting_file_url('homeblock15image', 'homeblock15image'))) ? false : $PAGE->theme->setting_file_url('homeblock15image', 'homeblock15image');
+        $homeblock15label = (empty($PAGE->theme->settings->homeblock15label)) ? false : format_text($PAGE->theme->settings->homeblock15label);
+        
+        $homeblock16title = (empty($PAGE->theme->settings->homeblock16title)) ? false : format_text($PAGE->theme->settings->homeblock16title);
+        $homeblock16content = (empty($PAGE->theme->settings->homeblock16content)) ? false : format_text($PAGE->theme->settings->homeblock16content);
+        $homeblock16url = (empty($PAGE->theme->settings->homeblock16url)) ? false : $PAGE->theme->settings->homeblock16url;
+        $homeblock16urlopennew = (empty($PAGE->theme->settings->homeblock16urlopennew)) ? false : $PAGE->theme->settings->homeblock16urlopennew;
+        $homeblock16image = (empty($PAGE->theme->setting_file_url('homeblock16image', 'homeblock16image'))) ? false : $PAGE->theme->setting_file_url('homeblock16image', 'homeblock16image');
+        $homeblock16label = (empty($PAGE->theme->settings->homeblock16label)) ? false : format_text($PAGE->theme->settings->homeblock16label);
+        
+        $homeblock17title = (empty($PAGE->theme->settings->homeblock17title)) ? false : format_text($PAGE->theme->settings->homeblock17title);
+        $homeblock17content = (empty($PAGE->theme->settings->homeblock17content)) ? false : format_text($PAGE->theme->settings->homeblock17content);
+        $homeblock17url = (empty($PAGE->theme->settings->homeblock17url)) ? false : $PAGE->theme->settings->homeblock17url;
+        $homeblock17urlopennew = (empty($PAGE->theme->settings->homeblock17urlopennew)) ? false : $PAGE->theme->settings->homeblock17urlopennew;
+        $homeblock17image = (empty($PAGE->theme->setting_file_url('homeblock17image', 'homeblock17image'))) ? false : $PAGE->theme->setting_file_url('homeblock17image', 'homeblock17image');
+        $homeblock17label = (empty($PAGE->theme->settings->homeblock17label)) ? false : format_text($PAGE->theme->settings->homeblock17label);
+        
+        $homeblock18title = (empty($PAGE->theme->settings->homeblock18title)) ? false : format_text($PAGE->theme->settings->homeblock18title);
+        $homeblock18content = (empty($PAGE->theme->settings->homeblock18content)) ? false : format_text($PAGE->theme->settings->homeblock18content);
+        $homeblock18url = (empty($PAGE->theme->settings->homeblock18url)) ? false : $PAGE->theme->settings->homeblock18url;
+        $homeblock18urlopennew = (empty($PAGE->theme->settings->homeblock18urlopennew)) ? false : $PAGE->theme->settings->homeblock18urlopennew;
+        $homeblock18image = (empty($PAGE->theme->setting_file_url('homeblock18image', 'homeblock18image'))) ? false : $PAGE->theme->setting_file_url('homeblock18image', 'homeblock18image');
+        $homeblock18label = (empty($PAGE->theme->settings->homeblock18label)) ? false : format_text($PAGE->theme->settings->homeblock18label);
+        
+        $homeblock19title = (empty($PAGE->theme->settings->homeblock19title)) ? false : format_text($PAGE->theme->settings->homeblock19title);
+        $homeblock19content = (empty($PAGE->theme->settings->homeblock19content)) ? false : format_text($PAGE->theme->settings->homeblock19content);
+        $homeblock19url = (empty($PAGE->theme->settings->homeblock19url)) ? false : $PAGE->theme->settings->homeblock19url;
+        $homeblock19urlopennew = (empty($PAGE->theme->settings->homeblock19urlopennew)) ? false : $PAGE->theme->settings->homeblock19urlopennew;
+        $homeblock19image = (empty($PAGE->theme->setting_file_url('homeblock19image', 'homeblock19image'))) ? false : $PAGE->theme->setting_file_url('homeblock19image', 'homeblock19image');
+        $homeblock19label = (empty($PAGE->theme->settings->homeblock19label)) ? false : format_text($PAGE->theme->settings->homeblock19label);
+        
+        $homeblock20title = (empty($PAGE->theme->settings->homeblock20title)) ? false : format_text($PAGE->theme->settings->homeblock20title);
+        $homeblock20content = (empty($PAGE->theme->settings->homeblock20content)) ? false : format_text($PAGE->theme->settings->homeblock20content);
+        $homeblock20url = (empty($PAGE->theme->settings->homeblock20url)) ? false : $PAGE->theme->settings->homeblock20url;
+        $homeblock20urlopennew = (empty($PAGE->theme->settings->homeblock20urlopennew)) ? false : $PAGE->theme->settings->homeblock20urlopennew;
+        $homeblock20image = (empty($PAGE->theme->setting_file_url('homeblock20image', 'homeblock20image'))) ? false : $PAGE->theme->setting_file_url('homeblock20image', 'homeblock20image');
+        $homeblock20label = (empty($PAGE->theme->settings->homeblock20label)) ? false : format_text($PAGE->theme->settings->homeblock20label);
 
 
         $fp_features = [
 
         'usefeaturedblocks' => $usehomeblocks,
         'featuredsectiontitle' => $featuredsectiontitle,
+        
+        
+        'homeblockbuttontext' => $homeblockbuttontext,
+        'homeblockbuttonurl' => $homeblockbuttonurl,
+        'homeblockbuttonurlopennew' => $homeblockbuttonurlopennew,
+        
 
         'featuredblocks' => array(
 	        
@@ -740,6 +1356,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock1title,
                 'blockcontent' => $homeblock1content,
                 'blockurl' => $homeblock1url,
+                'urlopennew' => $homeblock1urlopennew,
                 'blocklabel'=> $homeblock1label,
             ) ,
             
@@ -751,6 +1368,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock2title,
                 'blockcontent' => $homeblock2content,
                 'blockurl' => $homeblock2url,
+                'urlopennew' => $homeblock2urlopennew,
                 'blocklabel'=> $homeblock2label,
             ) ,
             
@@ -762,6 +1380,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock3title,
                 'blockcontent' => $homeblock3content,
                 'blockurl' => $homeblock3url,
+                'urlopennew' => $homeblock3urlopennew,
                 'blocklabel'=> $homeblock3label,
             ) ,
             
@@ -772,6 +1391,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock4title,
                 'blockcontent' => $homeblock4content,
                 'blockurl' => $homeblock4url,
+                'urlopennew' => $homeblock4urlopennew,
                 'blocklabel'=> $homeblock4label,
             ) ,
             
@@ -782,6 +1402,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock5title,
                 'blockcontent' => $homeblock5content,
                 'blockurl' => $homeblock5url,
+                'urlopennew' => $homeblock5urlopennew,
                 'blocklabel'=> $homeblock5label,
             ) ,
             
@@ -792,6 +1413,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock6title,
                 'blockcontent' => $homeblock6content,
                 'blockurl' => $homeblock6url,
+                'urlopennew' => $homeblock6urlopennew,
                 'blocklabel'=> $homeblock6label,
             ) ,
             
@@ -802,6 +1424,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock7title,
                 'blockcontent' => $homeblock7content,
                 'blockurl' => $homeblock7url,
+                'urlopennew' => $homeblock7urlopennew,
                 'blocklabel'=> $homeblock7label,
             ) ,
             
@@ -812,6 +1435,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock8title,
                 'blockcontent' => $homeblock8content,
                 'blockurl' => $homeblock8url,
+                'urlopennew' => $homeblock8urlopennew,
                 'blocklabel'=> $homeblock8label,
             ) ,
             
@@ -822,6 +1446,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock9title,
                 'blockcontent' => $homeblock9content,
                 'blockurl' => $homeblock9url,
+                'urlopennew' => $homeblock9urlopennew,
                 'blocklabel'=> $homeblock9label,
             ) ,
             
@@ -832,6 +1457,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock10title,
                 'blockcontent' => $homeblock10content,
                 'blockurl' => $homeblock10url,
+                'urlopennew' => $homeblock10urlopennew,
                 'blocklabel'=> $homeblock10label,
             ) ,
             
@@ -842,6 +1468,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock11title,
                 'blockcontent' => $homeblock11content,
                 'blockurl' => $homeblock11url,
+                'urlopennew' => $homeblock11urlopennew,
                 'blocklabel'=> $homeblock11label,
             ) ,
             
@@ -852,7 +1479,96 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'blocktitle' => $homeblock12title,
                 'blockcontent' => $homeblock12content,
                 'blockurl' => $homeblock12url,
+                'urlopennew' => $homeblock12urlopennew,
                 'blocklabel'=> $homeblock12label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '13',
+                'hasblock' => $homeblock13title,
+                'blockimage' => $homeblock13image,
+                'blocktitle' => $homeblock13title,
+                'blockcontent' => $homeblock13content,
+                'blockurl' => $homeblock13url,
+                'urlopennew' => $homeblock13urlopennew,
+                'blocklabel'=> $homeblock13label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '14',
+                'hasblock' => $homeblock14title,
+                'blockimage' => $homeblock14image,
+                'blocktitle' => $homeblock14title,
+                'blockcontent' => $homeblock14content,
+                'blockurl' => $homeblock14url,
+                'urlopennew' => $homeblock14urlopennew,
+                'blocklabel'=> $homeblock14label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '15',
+                'hasblock' => $homeblock15title,
+                'blockimage' => $homeblock15image,
+                'blocktitle' => $homeblock15title,
+                'blockcontent' => $homeblock15content,
+                'blockurl' => $homeblock15url,
+                'urlopennew' => $homeblock15urlopennew,
+                'blocklabel'=> $homeblock15label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '16',
+                'hasblock' => $homeblock16title,
+                'blockimage' => $homeblock16image,
+                'blocktitle' => $homeblock16title,
+                'blockcontent' => $homeblock16content,
+                'blockurl' => $homeblock16url,
+                'urlopennew' => $homeblock16urlopennew,
+                'blocklabel'=> $homeblock16label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '17',
+                'hasblock' => $homeblock17title,
+                'blockimage' => $homeblock17image,
+                'blocktitle' => $homeblock17title,
+                'blockcontent' => $homeblock17content,
+                'blockurl' => $homeblock17url,
+                'urlopennew' => $homeblock17urlopennew,
+                'blocklabel'=> $homeblock17label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '18',
+                'hasblock' => $homeblock18title,
+                'blockimage' => $homeblock18image,
+                'blocktitle' => $homeblock18title,
+                'blockcontent' => $homeblock18content,
+                'blockurl' => $homeblock18url,
+                'urlopennew' => $homeblock18urlopennew,
+                'blocklabel'=> $homeblock18label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '19',
+                'hasblock' => $homeblock19title,
+                'blockimage' => $homeblock19image,
+                'blocktitle' => $homeblock19title,
+                'blockcontent' => $homeblock19content,
+                'blockurl' => $homeblock19url,
+                'urlopennew' => $homeblock19urlopennew,
+                'blocklabel'=> $homeblock19label,
+            ) ,
+            
+            array(
+	            'blockcount'=> '20',
+                'hasblock' => $homeblock20title,
+                'blockimage' => $homeblock20image,
+                'blocktitle' => $homeblock20title,
+                'blockcontent' => $homeblock20content,
+                'blockurl' => $homeblock20url,
+                'urlopennew' => $homeblock20urlopennew,
+                'blocklabel'=> $homeblock20label,
             ) ,
             
             
@@ -1054,7 +1770,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
             ) , 
             
             
-            
         ),
 
         ];
@@ -1159,6 +1874,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         
         $categoriessectiontitle = (empty($PAGE->theme->settings->categoriessectiontitle)) ? false : format_text($PAGE->theme->settings->categoriessectiontitle);
         
+        
+        $categoriesbuttontext = (empty($PAGE->theme->settings->categoriesbuttontext)) ? false : format_text($PAGE->theme->settings->categoriesbuttontext);
+        $categoriesbuttonurl = (empty($PAGE->theme->settings->categoriesbuttonurl)) ? false : $PAGE->theme->settings->categoriesbuttonurl;
+        $categoriesbuttonurlopennew = (empty($PAGE->theme->settings->categoriesbuttonurlopennew)) ? false : $PAGE->theme->settings->categoriesbuttonurlopennew;
+        
 
         $category1title = (empty($PAGE->theme->settings->category1title)) ? false : format_text($PAGE->theme->settings->category1title);
         $category1content = (empty($PAGE->theme->settings->category1content)) ? false : format_text($PAGE->theme->settings->category1content);
@@ -1237,6 +1957,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         'usecategories' => $usecategories,
         'categoriessectiontitle' => $categoriessectiontitle,
+        
+        'categoriesbuttontext' => $categoriesbuttontext,
+        'categoriesbuttonurl' => $categoriesbuttonurl,
+        'categoriesbuttonurlopennew' => $categoriesbuttonurlopennew,
 
         'categories' => array(
 	        
@@ -1370,6 +2094,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         
         $defaultimage = $OUTPUT->image_url('teacher-default', 'theme');
         
+        //Teachers section CTA button
+        $teachersbuttontext = (empty($PAGE->theme->settings->teachersbuttontext)) ? false : format_text($PAGE->theme->settings->teachersbuttontext);
+        $teachersbuttonurl = (empty($PAGE->theme->settings->teachersbuttonurl)) ? false : $PAGE->theme->settings->teachersbuttonurl;
+        $teachersbuttonurlopennew = (empty($PAGE->theme->settings->teachersbuttonurlopennew)) ? false : $PAGE->theme->settings->teachersbuttonurlopennew;
+        
+        
         //Teacher 1
         $teacher1content = (empty($PAGE->theme->settings->teacher1content)) ? false : format_text($PAGE->theme->settings->teacher1content);
         $teacher1image = (empty($PAGE->theme->setting_file_url('teacher1image', 'teacher1image'))) ? false : $PAGE->theme->setting_file_url('teacher1image', 'teacher1image');
@@ -1429,12 +2159,78 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $teacher10image = (empty($PAGE->theme->setting_file_url('teacher10image', 'teacher10image'))) ? false : $PAGE->theme->setting_file_url('teacher10image', 'teacher10image');
         $teacher10name = (empty($PAGE->theme->settings->teacher10name)) ? false : format_text($PAGE->theme->settings->teacher10name);
         $teacher10meta = (empty($PAGE->theme->settings->teacher10meta)) ? false : format_text($PAGE->theme->settings->teacher10meta);
+        
+        //Teacher 11
+        $teacher11content = (empty($PAGE->theme->settings->teacher11content)) ? false : format_text($PAGE->theme->settings->teacher11content);
+        $teacher11image = (empty($PAGE->theme->setting_file_url('teacher11image', 'teacher11image'))) ? false : $PAGE->theme->setting_file_url('teacher11image', 'teacher11image');
+        $teacher11name = (empty($PAGE->theme->settings->teacher11name)) ? false : format_text($PAGE->theme->settings->teacher11name);
+        $teacher11meta = (empty($PAGE->theme->settings->teacher11meta)) ? false : format_text($PAGE->theme->settings->teacher11meta);
+        
+        //Teacher 12
+        $teacher12content = (empty($PAGE->theme->settings->teacher12content)) ? false : format_text($PAGE->theme->settings->teacher12content);
+        $teacher12image = (empty($PAGE->theme->setting_file_url('teacher12image', 'teacher12image'))) ? false : $PAGE->theme->setting_file_url('teacher12image', 'teacher12image');
+        $teacher12name = (empty($PAGE->theme->settings->teacher12name)) ? false : format_text($PAGE->theme->settings->teacher12name);
+        $teacher12meta = (empty($PAGE->theme->settings->teacher12meta)) ? false : format_text($PAGE->theme->settings->teacher12meta);
+        
+        //Teacher 13
+        $teacher13content = (empty($PAGE->theme->settings->teacher13content)) ? false : format_text($PAGE->theme->settings->teacher13content);
+        $teacher13image = (empty($PAGE->theme->setting_file_url('teacher13image', 'teacher13image'))) ? false : $PAGE->theme->setting_file_url('teacher13image', 'teacher13image');
+        $teacher13name = (empty($PAGE->theme->settings->teacher13name)) ? false : format_text($PAGE->theme->settings->teacher13name);
+        $teacher13meta = (empty($PAGE->theme->settings->teacher13meta)) ? false : format_text($PAGE->theme->settings->teacher13meta);
+        
+        //Teacher 14
+        $teacher14content = (empty($PAGE->theme->settings->teacher14content)) ? false : format_text($PAGE->theme->settings->teacher14content);
+        $teacher14image = (empty($PAGE->theme->setting_file_url('teacher14image', 'teacher14image'))) ? false : $PAGE->theme->setting_file_url('teacher14image', 'teacher14image');
+        $teacher14name = (empty($PAGE->theme->settings->teacher14name)) ? false : format_text($PAGE->theme->settings->teacher14name);
+        $teacher14meta = (empty($PAGE->theme->settings->teacher14meta)) ? false : format_text($PAGE->theme->settings->teacher14meta);
+        
+        //Teacher 15
+        $teacher15content = (empty($PAGE->theme->settings->teacher15content)) ? false : format_text($PAGE->theme->settings->teacher15content);
+        $teacher15image = (empty($PAGE->theme->setting_file_url('teacher15image', 'teacher15image'))) ? false : $PAGE->theme->setting_file_url('teacher15image', 'teacher15image');
+        $teacher15name = (empty($PAGE->theme->settings->teacher15name)) ? false : format_text($PAGE->theme->settings->teacher15name);
+        $teacher15meta = (empty($PAGE->theme->settings->teacher15meta)) ? false : format_text($PAGE->theme->settings->teacher15meta);
+        
+        //Teacher 16
+        $teacher16content = (empty($PAGE->theme->settings->teacher16content)) ? false : format_text($PAGE->theme->settings->teacher16content);
+        $teacher16image = (empty($PAGE->theme->setting_file_url('teacher16image', 'teacher16image'))) ? false : $PAGE->theme->setting_file_url('teacher16image', 'teacher16image');
+        $teacher16name = (empty($PAGE->theme->settings->teacher16name)) ? false : format_text($PAGE->theme->settings->teacher16name);
+        $teacher16meta = (empty($PAGE->theme->settings->teacher16meta)) ? false : format_text($PAGE->theme->settings->teacher16meta);
+        
+        //Teacher 17
+        $teacher17content = (empty($PAGE->theme->settings->teacher17content)) ? false : format_text($PAGE->theme->settings->teacher17content);
+        $teacher17image = (empty($PAGE->theme->setting_file_url('teacher17image', 'teacher17image'))) ? false : $PAGE->theme->setting_file_url('teacher17image', 'teacher17image');
+        $teacher17name = (empty($PAGE->theme->settings->teacher17name)) ? false : format_text($PAGE->theme->settings->teacher17name);
+        $teacher17meta = (empty($PAGE->theme->settings->teacher17meta)) ? false : format_text($PAGE->theme->settings->teacher17meta);
+        
+        //Teacher 18
+        $teacher18content = (empty($PAGE->theme->settings->teacher18content)) ? false : format_text($PAGE->theme->settings->teacher18content);
+        $teacher18image = (empty($PAGE->theme->setting_file_url('teacher18image', 'teacher18image'))) ? false : $PAGE->theme->setting_file_url('teacher18image', 'teacher18image');
+        $teacher18name = (empty($PAGE->theme->settings->teacher18name)) ? false : format_text($PAGE->theme->settings->teacher18name);
+        $teacher18meta = (empty($PAGE->theme->settings->teacher18meta)) ? false : format_text($PAGE->theme->settings->teacher18meta);
+        
+        //Teacher 19
+        $teacher19content = (empty($PAGE->theme->settings->teacher19content)) ? false : format_text($PAGE->theme->settings->teacher19content);
+        $teacher19image = (empty($PAGE->theme->setting_file_url('teacher19image', 'teacher19image'))) ? false : $PAGE->theme->setting_file_url('teacher19image', 'teacher19image');
+        $teacher19name = (empty($PAGE->theme->settings->teacher19name)) ? false : format_text($PAGE->theme->settings->teacher19name);
+        $teacher19meta = (empty($PAGE->theme->settings->teacher19meta)) ? false : format_text($PAGE->theme->settings->teacher19meta);
+        
+        //Teacher 20
+        $teacher20content = (empty($PAGE->theme->settings->teacher20content)) ? false : format_text($PAGE->theme->settings->teacher20content);
+        $teacher20image = (empty($PAGE->theme->setting_file_url('teacher20image', 'teacher20image'))) ? false : $PAGE->theme->setting_file_url('teacher20image', 'teacher20image');
+        $teacher20name = (empty($PAGE->theme->settings->teacher20name)) ? false : format_text($PAGE->theme->settings->teacher20name);
+        $teacher20meta = (empty($PAGE->theme->settings->teacher20meta)) ? false : format_text($PAGE->theme->settings->teacher20meta);
        
         $fp_teachers = [
 
         'useteachers' => $useteachers,
         'teachersectiontitle' => $teachersectiontitle,
         'defaultimage' => $defaultimage,
+        
+        'teachersbuttontext' => $teachersbuttontext,
+        'teachersbuttonurl' => $teachersbuttonurl,
+        'teachersbuttonurlopennew' => $teachersbuttonurlopennew,
+        
+        
         
         'teachers' => array(
 	        
@@ -1517,6 +2313,86 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'teachername' => $teacher10name,
                 'teachermeta' => $teacher10meta,
             ), 
+            
+            array(
+                'hasteacher' => $teacher11content,
+                'teacherbio' => $teacher11content,
+                'teacherimage' => $teacher11image,
+                'teachername' => $teacher11name,
+                'teachermeta' => $teacher11meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher12content,
+                'teacherbio' => $teacher12content,
+                'teacherimage' => $teacher12image,
+                'teachername' => $teacher12name,
+                'teachermeta' => $teacher12meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher13content,
+                'teacherbio' => $teacher13content,
+                'teacherimage' => $teacher13image,
+                'teachername' => $teacher13name,
+                'teachermeta' => $teacher13meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher14content,
+                'teacherbio' => $teacher14content,
+                'teacherimage' => $teacher14image,
+                'teachername' => $teacher14name,
+                'teachermeta' => $teacher14meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher15content,
+                'teacherbio' => $teacher15content,
+                'teacherimage' => $teacher15image,
+                'teachername' => $teacher15name,
+                'teachermeta' => $teacher15meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher16content,
+                'teacherbio' => $teacher16content,
+                'teacherimage' => $teacher16image,
+                'teachername' => $teacher16name,
+                'teachermeta' => $teacher16meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher17content,
+                'teacherbio' => $teacher17content,
+                'teacherimage' => $teacher17image,
+                'teachername' => $teacher17name,
+                'teachermeta' => $teacher17meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher18content,
+                'teacherbio' => $teacher18content,
+                'teacherimage' => $teacher18image,
+                'teachername' => $teacher18name,
+                'teachermeta' => $teacher18meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher19content,
+                'teacherbio' => $teacher19content,
+                'teacherimage' => $teacher19image,
+                'teachername' => $teacher19name,
+                'teachermeta' => $teacher19meta,
+            ), 
+            
+            array(
+                'hasteacher' => $teacher20content,
+                'teacherbio' => $teacher20content,
+                'teacherimage' => $teacher20image,
+                'teachername' => $teacher20name,
+                'teachermeta' => $teacher20meta,
+            ), 
   
               
         ),
@@ -1535,6 +2411,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $testimonialsectiontitle = (empty($PAGE->theme->settings->testimonialsectiontitle)) ? false : format_text($PAGE->theme->settings->testimonialsectiontitle);
         
         $defaultimage = $OUTPUT->image_url('default-profile', 'theme');
+        
+        
+        $testimonialsbuttontext = (empty($PAGE->theme->settings->testimonialsbuttontext)) ? false : format_text($PAGE->theme->settings->testimonialsbuttontext);
+        $testimonialsbuttonurl = (empty($PAGE->theme->settings->testimonialsbuttonurl)) ? false : $PAGE->theme->settings->testimonialsbuttonurl;
+        $testimonialsbuttonurlopennew = (empty($PAGE->theme->settings->testimonialsbuttonurlopennew)) ? false : $PAGE->theme->settings->testimonialsbuttonurlopennew;
         
         //Testimonial 1
         $testimonial1content = (empty($PAGE->theme->settings->testimonial1content)) ? false : format_text($PAGE->theme->settings->testimonial1content);
@@ -1577,6 +2458,11 @@ class core_renderer extends \theme_boost\output\core_renderer {
         'usetestimonials' => $usetestimonials,
         'testimonialsectiontitle' => $testimonialsectiontitle,
         'defaultimage' => $defaultimage,
+        
+        'testimonialsbuttontext' => $testimonialsbuttontext,
+        'testimonialsbuttonurl' => $testimonialsbuttonurl,
+        'testimonialsbuttonurlopennew' => $testimonialsbuttonurlopennew,
+        
         
         'testimonials' => array(
 	        
@@ -1722,12 +2608,24 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function fp_ctasection() {
         global $PAGE;
         
-        $usectasection = $PAGE->theme->settings->usectasection== 1;
+        $usectasection = $PAGE->theme->settings->usectasection == 1;
         $ctasectiontitle = (empty($PAGE->theme->settings->ctasectiontitle)) ? false : format_text($PAGE->theme->settings->ctasectiontitle);
         $ctasectioncontent = (empty($PAGE->theme->settings->ctasectioncontent)) ? false : format_text($PAGE->theme->settings->ctasectioncontent);
         $ctasectionbuttontext = (empty($PAGE->theme->settings->ctasectionbuttontext)) ? false : format_text($PAGE->theme->settings->ctasectionbuttontext);
         $ctasectionbuttonurl = (empty($PAGE->theme->settings->ctasectionbuttonurl)) ? false : $PAGE->theme->settings->ctasectionbuttonurl;
         $ctasectionbuttonurlopennew = $PAGE->theme->settings->ctasectionbuttonurlopennew== 1;
+        
+        
+        $usectadatabox = $PAGE->theme->settings->usectadatabox == 1;
+        
+        $ctadataitem1title = (empty($PAGE->theme->settings->ctadataitem1title)) ? false : format_text($PAGE->theme->settings->ctadataitem1title);
+        $ctadataitem1meta = (empty($PAGE->theme->settings->ctadataitem1meta)) ? false : format_text($PAGE->theme->settings->ctadataitem1meta);
+        $ctadataitem2title = (empty($PAGE->theme->settings->ctadataitem2title)) ? false : format_text($PAGE->theme->settings->ctadataitem2title);
+        $ctadataitem2meta = (empty($PAGE->theme->settings->ctadataitem2meta)) ? false : format_text($PAGE->theme->settings->ctadataitem2meta);
+        $ctadataitem3title = (empty($PAGE->theme->settings->ctadataitem3title)) ? false : format_text($PAGE->theme->settings->ctadataitem3title);
+        $ctadataitem3meta = (empty($PAGE->theme->settings->ctadataitem3meta)) ? false : format_text($PAGE->theme->settings->ctadataitem3meta);
+        $ctadataitem4title = (empty($PAGE->theme->settings->ctadataitem4title)) ? false : format_text($PAGE->theme->settings->ctadataitem4title);
+        $ctadataitem4meta = (empty($PAGE->theme->settings->ctadataitem4meta)) ? false : format_text($PAGE->theme->settings->ctadataitem4meta);
         
 
 
@@ -1740,7 +2638,31 @@ class core_renderer extends \theme_boost\output\core_renderer {
             'ctabutton' => $ctasectionbuttontext,
             'ctaurl' => $ctasectionbuttonurl,
             'urlopennew' => $ctasectionbuttonurlopennew,
-
+            
+            'hasctadatabox' => $usectadatabox,
+            
+            
+            'ctadataitems' => array(
+	        
+	            array(
+		            'ctadataitemtitle' => $ctadataitem1title,
+                    'ctadataitemmeta' => $ctadataitem1meta,
+	            ) ,
+	            array(
+		            'ctadataitemtitle' => $ctadataitem2title,
+                    'ctadataitemmeta' => $ctadataitem2meta,
+	            ) ,
+	            array(
+		            'ctadataitemtitle' => $ctadataitem3title,
+                    'ctadataitemmeta' => $ctadataitem3meta,
+	            ) ,
+            
+                array(
+		            'ctadataitemtitle' => $ctadataitem4title,
+                    'ctadataitemmeta' => $ctadataitem4meta,
+	            ) ,
+            
+            ),
 
         ];
 
