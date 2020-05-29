@@ -2207,8 +2207,9 @@ class html_writer {
                     $heading->header = true;
                 }
 
-                if ($heading->header && empty($heading->scope)) {
-                    $heading->scope = 'col';
+                $tagtype = 'td';
+                if ($heading->header && (string)$heading->text != '') {
+                    $tagtype = 'th';
                 }
 
                 $heading->attributes['class'] .= ' header c' . $key;
@@ -2224,16 +2225,15 @@ class html_writer {
                     $heading->attributes['class'] .= ' ' . $table->colclasses[$key];
                 }
                 $heading->attributes['class'] = trim($heading->attributes['class']);
-                $attributes = array_merge($heading->attributes, array(
-                        'style'     => $table->align[$key] . $table->size[$key] . $heading->style,
-                        'scope'     => $heading->scope,
-                        'colspan'   => $heading->colspan,
-                    ));
+                $attributes = array_merge($heading->attributes, [
+                    'style'     => $table->align[$key] . $table->size[$key] . $heading->style,
+                    'colspan'   => $heading->colspan,
+                ]);
 
-                $tagtype = 'td';
-                if ($heading->header === true) {
-                    $tagtype = 'th';
+                if ($tagtype == 'th') {
+                    $attributes['scope'] = !empty($heading->scope) ? $heading->scope : 'col';
                 }
+
                 $output .= html_writer::tag($tagtype, $heading->text, $attributes) . "\n";
             }
             $output .= html_writer::end_tag('tr') . "\n";
@@ -3092,7 +3092,7 @@ class paging_bar implements renderable, templatable {
 
         if ($this->page > 0) {
             $data->previous = [
-                'page' => $this->page - 1,
+                'page' => $this->page,
                 'url' => (new moodle_url($this->baseurl, [$this->pagevar => $this->page - 1]))->out(false)
             ];
         }
@@ -3138,7 +3138,7 @@ class paging_bar implements renderable, templatable {
 
         if ($this->page + 1 != $lastpage) {
             $data->next = [
-                'page' => $this->page + 1,
+                'page' => $this->page + 2,
                 'url' => (new moodle_url($this->baseurl, [$this->pagevar => $this->page + 1]))->out(false)
             ];
         }
@@ -3763,11 +3763,10 @@ class custom_menu extends custom_menu_item {
                 $setting = trim($setting);
                 if (!empty($setting)) {
                     switch ($i) {
-                        case 0:
+                        case 0: // Menu text.
                             $itemtext = ltrim($setting, '-');
-                            $itemtitle = $itemtext;
                             break;
-                        case 1:
+                        case 1: // URL.
                             try {
                                 $itemurl = new moodle_url($setting);
                             } catch (moodle_exception $exception) {
@@ -3776,10 +3775,10 @@ class custom_menu extends custom_menu_item {
                                 $itemurl = null;
                             }
                             break;
-                        case 2:
+                        case 2: // Title attribute.
                             $itemtitle = $setting;
                             break;
-                        case 3:
+                        case 3: // Language.
                             if (!empty($language)) {
                                 $itemlanguages = array_map('trim', explode(',', $setting));
                                 $itemvisible &= in_array($language, $itemlanguages);
